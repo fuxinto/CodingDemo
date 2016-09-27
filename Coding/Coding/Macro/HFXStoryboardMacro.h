@@ -1,0 +1,25 @@
+//
+//  HFXStoryboardMacro.h
+//  Coding
+//
+//  Created by tens04 on 16/9/27.
+//  Copyright © 2016年 fuxinto. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#pragma mark - Storyboard Name 
+
+UIKIT_EXTERN NSString *const HFXPublicStoryboardName;
+
+
+
+#pragma mark - Storyboard ID
+
+UIKIT_EXTERN NSString *const HFXGuidePageIdentifier;
+UIKIT_EXTERN NSString *const HFXRegisterPageIdentifier;
+
+
+UIKIT_EXTERN NSString *const HFXOnlyTextTableCellIdentifier;
+

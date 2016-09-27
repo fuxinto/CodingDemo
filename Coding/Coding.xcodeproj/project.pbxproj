@@ -25,6 +25,15 @@
 		330D4C7C1D9904EB003EB51E /* UIColor+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */; };
 		330D4C811D990C75003EB51E /* HFXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C801D990C75003EB51E /* HFXNetWorkManager.m */; };
 		330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */; };
+		33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */; };
+		33F08C561D9A1BA600B655AB /* Public.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F08C551D9A1BA600B655AB /* Public.storyboard */; };
+		33F08C5A1D9A1BD600B655AB /* HFXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */; };
+		33F08C601D9A1E1300B655AB /* UIView+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C5F1D9A1E1300B655AB /* UIView+HFXCategory.m */; };
+		33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C621D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m */; };
+		33F08C6A1D9A5D1F00B655AB /* HFXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C691D9A5D1F00B655AB /* HFXRegisterViewController.m */; };
+		33F08C6D1D9A672900B655AB /* HFXBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C6C1D9A672900B655AB /* HFXBaseTableViewCell.m */; };
+		33F08C711D9A686B00B655AB /* HFXOnlyTextTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C701D9A686B00B655AB /* HFXOnlyTextTableCell.m */; };
+		33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */; };
 		39A8221C3AE3BA6E6EE62571 /* libPods-Coding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302D7D4E35510B9F395D5DB0 /* libPods-Coding.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +93,25 @@
 		330D4C801D990C75003EB51E /* HFXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXNetWorkManager.m; sourceTree = "<group>"; };
 		330D4C821D9918F5003EB51E /* NSObject+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HFXCategory.h"; sourceTree = "<group>"; };
 		330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HFXCategory.m"; sourceTree = "<group>"; };
+		33F08C501D9A094B00B655AB /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
+		33F08C511D9A098400B655AB /* HFXStoryboardMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXStoryboardMacro.h; sourceTree = "<group>"; };
+		33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXStoryboardMacro.m; sourceTree = "<group>"; };
+		33F08C551D9A1BA600B655AB /* Public.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Public.storyboard; sourceTree = "<group>"; };
+		33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXGuideViewController.m; sourceTree = "<group>"; };
+		33F08C5E1D9A1E1300B655AB /* UIView+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HFXCategory.h"; sourceTree = "<group>"; };
+		33F08C5F1D9A1E1300B655AB /* UIView+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HFXCategory.m"; sourceTree = "<group>"; };
+		33F08C611D9A1EFC00B655AB /* UIStoryboard+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+HFXCategory.h"; sourceTree = "<group>"; };
+		33F08C621D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+HFXCategory.m"; sourceTree = "<group>"; };
+		33F08C671D9A4FB800B655AB /* HFXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFXGuideViewController.h; sourceTree = "<group>"; };
+		33F08C681D9A5D1F00B655AB /* HFXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXRegisterViewController.h; sourceTree = "<group>"; };
+		33F08C691D9A5D1F00B655AB /* HFXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXRegisterViewController.m; sourceTree = "<group>"; };
+		33F08C6B1D9A672900B655AB /* HFXBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBaseTableViewCell.h; sourceTree = "<group>"; };
+		33F08C6C1D9A672900B655AB /* HFXBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXBaseTableViewCell.m; sourceTree = "<group>"; };
+		33F08C6F1D9A686B00B655AB /* HFXOnlyTextTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXOnlyTextTableCell.h; sourceTree = "<group>"; };
+		33F08C701D9A686B00B655AB /* HFXOnlyTextTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXOnlyTextTableCell.m; sourceTree = "<group>"; };
+		33F08C721D9A716800B655AB /* UIImage+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HFXCategory.h"; sourceTree = "<group>"; };
+		33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HFXCategory.m"; sourceTree = "<group>"; };
+		33F08C751D9A71AF00B655AB /* HFXAllCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFXAllCategory.h; sourceTree = "<group>"; };
 		F34ACE62FB241FEC69CA662F /* Pods-Coding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coding/Pods-Coding.debug.xcconfig"; sourceTree = "<group>"; };
 		F67097A233771D9F2EF6F1BA /* Pods-Coding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coding/Pods-Coding.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,10 +170,12 @@
 				330D4C4E1D98CC02003EB51E /* HFXAppDelegate */,
 				330D4C5C1D98D7EB003EB51E /* Resources */,
 				330D4C521D98CCAD003EB51E /* BaseClass */,
+				33F08C6E1D9A682100B655AB /* View */,
 				330D4C5F1D98D89C003EB51E /* ViewControllers */,
 				330D4C601D98EB5E003EB51E /* Categories */,
-				330D4C1B1D98CB8B003EB51E /* Supporting Files */,
+				33F08C4F1D9A08FA00B655AB /* Macro */,
 				330D4C7E1D990BEE003EB51E /* Helper */,
+				330D4C1B1D98CB8B003EB51E /* Supporting Files */,
 			);
 			path = Coding;
 			sourceTree = "<group>";
@@ -195,6 +225,8 @@
 				330D4C571D98CD73003EB51E /* HFXBaseViewController.m */,
 				330D4C591D98CD93003EB51E /* HFXNavigationViewController.h */,
 				330D4C5A1D98CD93003EB51E /* HFXNavigationViewController.m */,
+				33F08C6B1D9A672900B655AB /* HFXBaseTableViewCell.h */,
+				33F08C6C1D9A672900B655AB /* HFXBaseTableViewCell.m */,
 			);
 			name = BaseClass;
 			sourceTree = "<group>";
@@ -213,6 +245,7 @@
 				330D4C781D98F792003EB51E /* Main.storyboard */,
 				330D4C611D98F641003EB51E /* HFXRootTabBarController.h */,
 				330D4C621D98F641003EB51E /* HFXRootTabBarController.m */,
+				33F08C541D9A1B6F00B655AB /* Public */,
 				330D4C671D98F6C2003EB51E /* Project */,
 				330D4C681D98F6C2003EB51E /* Task */,
 				330D4C641D98F6C2003EB51E /* Bubble */,
@@ -225,10 +258,17 @@
 		330D4C601D98EB5E003EB51E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				33F08C751D9A71AF00B655AB /* HFXAllCategory.h */,
 				330D4C7A1D9904EB003EB51E /* UIColor+HFXCategory.h */,
 				330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */,
 				330D4C821D9918F5003EB51E /* NSObject+HFXCategory.h */,
 				330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */,
+				33F08C5E1D9A1E1300B655AB /* UIView+HFXCategory.h */,
+				33F08C5F1D9A1E1300B655AB /* UIView+HFXCategory.m */,
+				33F08C611D9A1EFC00B655AB /* UIStoryboard+HFXCategory.h */,
+				33F08C621D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m */,
+				33F08C721D9A716800B655AB /* UIImage+HFXCategory.h */,
+				33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -290,6 +330,46 @@
 				330D4C801D990C75003EB51E /* HFXNetWorkManager.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		33F08C4F1D9A08FA00B655AB /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				33F08C501D9A094B00B655AB /* AppMacro.h */,
+				33F08C511D9A098400B655AB /* HFXStoryboardMacro.h */,
+				33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		33F08C541D9A1B6F00B655AB /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				33F08C551D9A1BA600B655AB /* Public.storyboard */,
+				33F08C571D9A1BB600B655AB /* Guide */,
+			);
+			name = Public;
+			path = ViewControllers/Public;
+			sourceTree = "<group>";
+		};
+		33F08C571D9A1BB600B655AB /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				33F08C671D9A4FB800B655AB /* HFXGuideViewController.h */,
+				33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */,
+				33F08C681D9A5D1F00B655AB /* HFXRegisterViewController.h */,
+				33F08C691D9A5D1F00B655AB /* HFXRegisterViewController.m */,
+			);
+			name = Guide;
+			sourceTree = "<group>";
+		};
+		33F08C6E1D9A682100B655AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33F08C6F1D9A686B00B655AB /* HFXOnlyTextTableCell.h */,
+				33F08C701D9A686B00B655AB /* HFXOnlyTextTableCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96692EEA1F731ABE86F23ACE /* Pods */ = {
@@ -379,7 +459,6 @@
 				TargetAttributes = {
 					330D4C171D98CB8B003EB51E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AFT3X3UN4B;
 						ProvisioningStyle = Automatic;
 					};
 					330D4C301D98CB8B003EB51E = {
@@ -424,6 +503,7 @@
 				330D4C2B1D98CB8B003EB51E /* LaunchScreen.storyboard in Resources */,
 				330D4C5E1D98D868003EB51E /* Assets.xcassets in Resources */,
 				330D4C791D98F792003EB51E /* Main.storyboard in Resources */,
+				33F08C561D9A1BA600B655AB /* Public.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,18 +576,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F08C5A1D9A1BD600B655AB /* HFXGuideViewController.m in Sources */,
 				330D4C7C1D9904EB003EB51E /* UIColor+HFXCategory.m in Sources */,
+				33F08C711D9A686B00B655AB /* HFXOnlyTextTableCell.m in Sources */,
+				33F08C6A1D9A5D1F00B655AB /* HFXRegisterViewController.m in Sources */,
 				330D4C631D98F641003EB51E /* HFXRootTabBarController.m in Sources */,
 				330D4C6B1D98F720003EB51E /* HFXProjectViewController.m in Sources */,
+				33F08C6D1D9A672900B655AB /* HFXBaseTableViewCell.m in Sources */,
 				330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */,
 				330D4C581D98CD73003EB51E /* HFXBaseViewController.m in Sources */,
 				330D4C6E1D98F72C003EB51E /* HFXTaskViewController.m in Sources */,
+				33F08C601D9A1E1300B655AB /* UIView+HFXCategory.m in Sources */,
+				33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */,
 				330D4C811D990C75003EB51E /* HFXNetWorkManager.m in Sources */,
 				330D4C5B1D98CD93003EB51E /* HFXNavigationViewController.m in Sources */,
+				33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */,
 				330D4C771D98F761003EB51E /* HFXMeViewController.m in Sources */,
 				330D4C741D98F757003EB51E /* HFXMessageViewController.m in Sources */,
 				330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */,
 				330D4C511D98CC02003EB51E /* HFXAppDelegate.m in Sources */,
+				33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */,
 				330D4C1D1D98CB8B003EB51E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,7 +740,8 @@
 			baseConfigurationReference = F34ACE62FB241FEC69CA662F /* Pods-Coding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = Coding/PrefixHeader.pch;
 				INFOPLIST_FILE = Coding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -668,7 +757,8 @@
 			baseConfigurationReference = F67097A233771D9F2EF6F1BA /* Pods-Coding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AFT3X3UN4B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = Coding/PrefixHeader.pch;
 				INFOPLIST_FILE = Coding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

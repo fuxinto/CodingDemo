@@ -7,8 +7,14 @@
 //
 
 #import "HFXAppDelegate.h"
+#import "HFXGuideViewController.h"
 
 @interface HFXAppDelegate ()
+
+/*
+ * 统一设置UI样式
+ */
+- (void)customAppearance;
 
 @end
 
@@ -16,7 +22,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self customAppearance];
+    
+    BOOL isFirstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirstLaunch"];
+    if (!isFirstLaunch) {
+        [self setupGuidePage];
+    } else {
+        
+    }
+
+    
     return YES;
 }
 
@@ -47,5 +63,28 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)setupGuidePage {
+    
+    HFXGuideViewController *guide = (HFXGuideViewController *)[UIStoryboard storyboardWithName:HFXPublicStoryboardName instantiateWithIdentifier:HFXGuidePageIdentifier];
+    
+    self.window.rootViewController = guide;
+    
+}
+
+#pragma mark - Private
+
+- (void)customAppearance {
+    
+    // NavigationBar
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.tintColor = [UIColor whiteColor];
+    
+    [navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18], NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x28303b alpha:1]] forBarMetrics:UIBarMetricsDefault];
+    
+    // UITextField
+    [[UITextField appearance] setTintColor:[UIColor colorWithHex:0x3bbc79 alpha:1]];
+}
 
 @end

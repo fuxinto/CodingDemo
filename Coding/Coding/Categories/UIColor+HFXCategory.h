@@ -23,4 +23,11 @@
  */
 + (UIColor *)randomColor;
 
+
+
+/**
+ * 二进制颜色
+ */
++ (UIColor *)colorWithHex:(int)hex alpha:(CGFloat)alpha;
+
 @end

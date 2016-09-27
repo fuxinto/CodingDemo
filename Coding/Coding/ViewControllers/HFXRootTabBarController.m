@@ -7,7 +7,7 @@
 //
 
 #import "HFXRootTabBarController.h"
-#import "UIColor+HFXCategory.h"
+
 #import "HFXNavigationViewController.h"
 
 @interface HFXRootTabBarController ()
