@@ -23,8 +23,14 @@
 		330D4C771D98F761003EB51E /* HFXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C761D98F761003EB51E /* HFXMeViewController.m */; };
 		330D4C791D98F792003EB51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330D4C781D98F792003EB51E /* Main.storyboard */; };
 		330D4C7C1D9904EB003EB51E /* UIColor+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */; };
-		330D4C811D990C75003EB51E /* HFXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C801D990C75003EB51E /* HFXNetWorkManager.m */; };
 		330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */; };
+		332BCEC71D9BA3A600D0D0E3 /* HFXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCEC61D9BA3A600D0D0E3 /* HFXNetWorkManager.m */; };
+		332BCECC1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCECB1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m */; };
+		332BCECF1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCECE1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.m */; };
+		332BCED21D9BB89600D0D0E3 /* BasesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCED11D9BB89600D0D0E3 /* BasesModel.m */; };
+		332BCED71D9BC12C00D0D0E3 /* NSString+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCED61D9BC12C00D0D0E3 /* NSString+HFXCategory.m */; };
+		332BCEDB1D9BD7EB00D0D0E3 /* HFXTapImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */; };
+		332BCEDE1D9BDA9800D0D0E3 /* HFXAPPMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCEDD1D9BDA9800D0D0E3 /* HFXAPPMacro.m */; };
 		33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */; };
 		33F08C561D9A1BA600B655AB /* Public.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F08C551D9A1BA600B655AB /* Public.storyboard */; };
 		33F08C5A1D9A1BD600B655AB /* HFXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */; };
@@ -89,10 +95,24 @@
 		330D4C7A1D9904EB003EB51E /* UIColor+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HFXCategory.h"; sourceTree = "<group>"; };
 		330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HFXCategory.m"; sourceTree = "<group>"; };
 		330D4C7D1D99098E003EB51E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		330D4C7F1D990C75003EB51E /* HFXNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXNetWorkManager.h; sourceTree = "<group>"; };
-		330D4C801D990C75003EB51E /* HFXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXNetWorkManager.m; sourceTree = "<group>"; };
 		330D4C821D9918F5003EB51E /* NSObject+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HFXCategory.h"; sourceTree = "<group>"; };
 		330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HFXCategory.m"; sourceTree = "<group>"; };
+		332BCEC51D9BA3A600D0D0E3 /* HFXNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXNetWorkManager.h; sourceTree = "<group>"; };
+		332BCEC61D9BA3A600D0D0E3 /* HFXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXNetWorkManager.m; sourceTree = "<group>"; };
+		332BCECA1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXRegisterRequestModel.h; sourceTree = "<group>"; };
+		332BCECB1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXRegisterRequestModel.m; sourceTree = "<group>"; };
+		332BCECD1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXCaptchaResponseModel.h; sourceTree = "<group>"; };
+		332BCECE1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXCaptchaResponseModel.m; sourceTree = "<group>"; };
+		332BCED01D9BB89600D0D0E3 /* BasesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasesModel.h; sourceTree = "<group>"; };
+		332BCED11D9BB89600D0D0E3 /* BasesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasesModel.m; sourceTree = "<group>"; };
+		332BCED41D9BBF6E00D0D0E3 /* HFXAllRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFXAllRequestModel.h; sourceTree = "<group>"; };
+		332BCED51D9BC12C00D0D0E3 /* NSString+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HFXCategory.h"; sourceTree = "<group>"; };
+		332BCED61D9BC12C00D0D0E3 /* NSString+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HFXCategory.m"; sourceTree = "<group>"; };
+		332BCED81D9BC23600D0D0E3 /* APIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIMacro.h; sourceTree = "<group>"; };
+		332BCED91D9BD7EB00D0D0E3 /* HFXTapImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTapImageView.h; sourceTree = "<group>"; };
+		332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTapImageView.m; sourceTree = "<group>"; };
+		332BCEDC1D9BDA9800D0D0E3 /* HFXAPPMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXAPPMacro.h; sourceTree = "<group>"; };
+		332BCEDD1D9BDA9800D0D0E3 /* HFXAPPMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXAPPMacro.m; sourceTree = "<group>"; };
 		33F08C501D9A094B00B655AB /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		33F08C511D9A098400B655AB /* HFXStoryboardMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXStoryboardMacro.h; sourceTree = "<group>"; };
 		33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXStoryboardMacro.m; sourceTree = "<group>"; };
@@ -169,12 +189,13 @@
 			children = (
 				330D4C4E1D98CC02003EB51E /* HFXAppDelegate */,
 				330D4C5C1D98D7EB003EB51E /* Resources */,
+				330D4C601D98EB5E003EB51E /* Categories */,
 				330D4C521D98CCAD003EB51E /* BaseClass */,
+				332BCEC31D9B5C6600D0D0E3 /* Model */,
 				33F08C6E1D9A682100B655AB /* View */,
 				330D4C5F1D98D89C003EB51E /* ViewControllers */,
-				330D4C601D98EB5E003EB51E /* Categories */,
 				33F08C4F1D9A08FA00B655AB /* Macro */,
-				330D4C7E1D990BEE003EB51E /* Helper */,
+				332BCEC41D9BA3A600D0D0E3 /* HTTPTool */,
 				330D4C1B1D98CB8B003EB51E /* Supporting Files */,
 			);
 			path = Coding;
@@ -221,6 +242,8 @@
 		330D4C521D98CCAD003EB51E /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				332BCED01D9BB89600D0D0E3 /* BasesModel.h */,
+				332BCED11D9BB89600D0D0E3 /* BasesModel.m */,
 				330D4C561D98CD73003EB51E /* HFXBaseViewController.h */,
 				330D4C571D98CD73003EB51E /* HFXBaseViewController.m */,
 				330D4C591D98CD93003EB51E /* HFXNavigationViewController.h */,
@@ -269,6 +292,8 @@
 				33F08C621D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m */,
 				33F08C721D9A716800B655AB /* UIImage+HFXCategory.h */,
 				33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */,
+				332BCED51D9BC12C00D0D0E3 /* NSString+HFXCategory.h */,
+				332BCED61D9BC12C00D0D0E3 /* NSString+HFXCategory.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -323,21 +348,52 @@
 			path = ViewControllers/Task;
 			sourceTree = "<group>";
 		};
-		330D4C7E1D990BEE003EB51E /* Helper */ = {
+		332BCEC31D9B5C6600D0D0E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				330D4C7F1D990C75003EB51E /* HFXNetWorkManager.h */,
-				330D4C801D990C75003EB51E /* HFXNetWorkManager.m */,
+				332BCED41D9BBF6E00D0D0E3 /* HFXAllRequestModel.h */,
+				332BCEC91D9BB08600D0D0E3 /* Response */,
+				332BCEC81D9BB07300D0D0E3 /* Request */,
 			);
-			path = Helper;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		332BCEC41D9BA3A600D0D0E3 /* HTTPTool */ = {
+			isa = PBXGroup;
+			children = (
+				332BCEC51D9BA3A600D0D0E3 /* HFXNetWorkManager.h */,
+				332BCEC61D9BA3A600D0D0E3 /* HFXNetWorkManager.m */,
+			);
+			path = HTTPTool;
+			sourceTree = "<group>";
+		};
+		332BCEC81D9BB07300D0D0E3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				332BCECA1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.h */,
+				332BCECB1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		332BCEC91D9BB08600D0D0E3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				332BCECD1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.h */,
+				332BCECE1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.m */,
+			);
+			name = Response;
 			sourceTree = "<group>";
 		};
 		33F08C4F1D9A08FA00B655AB /* Macro */ = {
 			isa = PBXGroup;
 			children = (
 				33F08C501D9A094B00B655AB /* AppMacro.h */,
+				332BCED81D9BC23600D0D0E3 /* APIMacro.h */,
 				33F08C511D9A098400B655AB /* HFXStoryboardMacro.h */,
 				33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */,
+				332BCEDC1D9BDA9800D0D0E3 /* HFXAPPMacro.h */,
+				332BCEDD1D9BDA9800D0D0E3 /* HFXAPPMacro.m */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -368,6 +424,8 @@
 			children = (
 				33F08C6F1D9A686B00B655AB /* HFXOnlyTextTableCell.h */,
 				33F08C701D9A686B00B655AB /* HFXOnlyTextTableCell.m */,
+				332BCED91D9BD7EB00D0D0E3 /* HFXTapImageView.h */,
+				332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,12 +512,14 @@
 		330D4C101D98CB8B003EB51E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HFX;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = fuxinto;
 				TargetAttributes = {
 					330D4C171D98CB8B003EB51E = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = XE4L69889G;
+						ProvisioningStyle = Manual;
 					};
 					330D4C301D98CB8B003EB51E = {
 						CreatedOnToolsVersion = 8.0;
@@ -582,19 +642,25 @@
 				33F08C6A1D9A5D1F00B655AB /* HFXRegisterViewController.m in Sources */,
 				330D4C631D98F641003EB51E /* HFXRootTabBarController.m in Sources */,
 				330D4C6B1D98F720003EB51E /* HFXProjectViewController.m in Sources */,
+				332BCED71D9BC12C00D0D0E3 /* NSString+HFXCategory.m in Sources */,
 				33F08C6D1D9A672900B655AB /* HFXBaseTableViewCell.m in Sources */,
 				330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */,
 				330D4C581D98CD73003EB51E /* HFXBaseViewController.m in Sources */,
+				332BCEC71D9BA3A600D0D0E3 /* HFXNetWorkManager.m in Sources */,
 				330D4C6E1D98F72C003EB51E /* HFXTaskViewController.m in Sources */,
+				332BCECC1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m in Sources */,
 				33F08C601D9A1E1300B655AB /* UIView+HFXCategory.m in Sources */,
 				33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */,
-				330D4C811D990C75003EB51E /* HFXNetWorkManager.m in Sources */,
+				332BCED21D9BB89600D0D0E3 /* BasesModel.m in Sources */,
 				330D4C5B1D98CD93003EB51E /* HFXNavigationViewController.m in Sources */,
 				33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */,
+				332BCECF1D9BB33400D0D0E3 /* HFXCaptchaResponseModel.m in Sources */,
+				332BCEDE1D9BDA9800D0D0E3 /* HFXAPPMacro.m in Sources */,
 				330D4C771D98F761003EB51E /* HFXMeViewController.m in Sources */,
 				330D4C741D98F757003EB51E /* HFXMessageViewController.m in Sources */,
 				330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */,
 				330D4C511D98CC02003EB51E /* HFXAppDelegate.m in Sources */,
+				332BCEDB1D9BD7EB00D0D0E3 /* HFXTapImageView.m in Sources */,
 				33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */,
 				330D4C1D1D98CB8B003EB51E /* main.m in Sources */,
 			);
@@ -741,13 +807,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XE4L69889G;
 				GCC_PREFIX_HEADER = Coding/PrefixHeader.pch;
 				INFOPLIST_FILE = Coding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.Coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "def91bc8-270b-4d32-9a58-c895fb4d8683";
+				PROVISIONING_PROFILE_SPECIFIER = hfx;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -758,13 +826,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XE4L69889G;
 				GCC_PREFIX_HEADER = Coding/PrefixHeader.pch;
 				INFOPLIST_FILE = Coding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuxinto.Coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "def91bc8-270b-4d32-9a58-c895fb4d8683";
+				PROVISIONING_PROFILE_SPECIFIER = hfx;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 //
 
 #import "HFXBaseTableViewCell.h"
+#import "HFXTapImageView.h"
 
 @interface HFXOnlyTextTableCell : HFXBaseTableViewCell
 <UITextFieldDelegate>
@@ -14,5 +15,15 @@
 @property (strong, nonatomic) UITextField *textField;
 
 @property (strong, nonatomic) void (^textFieldDidChangeBlock)(NSString *text);
+
+@property (strong, nonatomic) HFXTapImageView *captchaImageView;
+
+
+/**
+ 刷新验证码
+ */
+- (void)refreshCaptcha;
+
+
 
 @end

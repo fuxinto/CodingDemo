@@ -137,6 +137,9 @@
                                             <state key="normal" title="注册">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="registerButton:" destination="ABF-79-eOt" eventType="touchUpInside" id="1sp-IS-Qd1"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMQ-br-bk2">
                                             <attributedString key="attributedText">
@@ -172,7 +175,7 @@
                                         <rect key="frame" x="0.0" y="114" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vj6-N5-ECj" id="NgN-Sg-mdp">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

@@ -8,7 +8,7 @@
 
 #import "HFXOnlyTextTableCell.h"
 #import "Masonry.h"
-
+#import "UIImageView+WebCache.h"
 
 @implementation HFXOnlyTextTableCell 
 
@@ -16,6 +16,14 @@
     
     [super cellDidLoadSubView];
     [self.contentView addSubview:self.textField];
+    [self.contentView addSubview:self.captchaImageView];
+    
+    
+    __weak typeof(self) weakSelf = self;
+    self.captchaImageView.handleTapBlock = ^(HFXTapImageView *imageView){
+        [weakSelf refreshCaptcha];
+    };
+
 }
 
 - (void)cellDidAdjustAutoLayout {
@@ -27,6 +35,28 @@
         make.top.bottom.mas_equalTo(0);
     }];
     
+    [self.captchaImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.mas_equalTo(-10);
+        make.centerY.equalTo(self.contentView);
+        make.size.mas_equalTo(CGSizeMake(60, 25));
+    }];
+}
+
+- (void)layoutSubviews {
+    
+    [self refreshCaptcha];
+}
+
+
+#pragma mark - Public
+
+- (void)refreshCaptcha {
+    
+    NSURL *url = [NSURL URLWithString:[HFXBaseURLString stringByAppendingString:kGetCaptcha]];
+    
+    [self.captchaImageView sd_setImageWithURL:url
+                             placeholderImage:nil
+                                      options:(SDWebImageRetryFailed | SDWebImageRefreshCached | SDWebImageHandleCookies)];
     
 }
 
@@ -51,5 +81,13 @@
     return _textField;
 }
 
+
+- (HFXTapImageView *)captchaImageView {
+    if (!_captchaImageView) {
+        _captchaImageView = [[HFXTapImageView alloc]init];
+        _captchaImageView.hidden = YES;
+    }
+    return _captchaImageView;
+}
 
 @end
