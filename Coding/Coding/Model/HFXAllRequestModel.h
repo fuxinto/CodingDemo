@@ -12,5 +12,6 @@
 
 #import "HFXCaptchaResponseModel.h"
 #import "HFXRegisterRequestModel.h"
+#import "HFXLoginRequestModel.h"
 
 #endif /* HFXAllRequestModel_h */

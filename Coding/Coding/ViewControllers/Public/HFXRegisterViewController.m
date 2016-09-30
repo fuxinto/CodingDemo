@@ -9,7 +9,7 @@
 #import "HFXRegisterViewController.h"
 #import "HFXOnlyTextTableCell.h"
 #import "HFXRegisterRequestModel.h"
-
+#import "HFXProtocolPageViewController.h"
 
 @interface HFXRegisterViewController ()<UITableViewDelegate,UITableViewDataSource> {
     
@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UILabel *serverLabel;
 
-@property (strong, nonatomic) HFXRegisterRequestModel *requestModel;
+@property (strong, nonatomic) HFXRegisterRequestModel *registerRequestModel;
 /**
  * 同意条款点击事件
  */
@@ -41,7 +41,7 @@
 /**
  是否需要验证码
  */
-- (void)isNeedCaptcha;
+- (void)isNeedCaptchaJudge;
 
 @end
 
@@ -68,7 +68,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self isNeedCaptcha];
+    [self isNeedCaptchaJudge];
     
 }
 
@@ -79,17 +79,16 @@
 
 #pragma mark - Private
 
-- (void)isNeedCaptcha {
+- (void)isNeedCaptchaJudge {
     
-    [[HFXNetWorkManager shareInstance] isNeedCaptchaWithCompletionHandler:^(id resulst, NSError *error) {
+    [[HFXNetWorkManager shareInstance] registerIsNeedCaptchaWithCompletionHandler:^(id resulst, NSError *error) {
         if (error) {
             _isNeedCaptcha = NO;
         }else {
             
             HFXCaptchaResponseModel *captchaModel = [[HFXCaptchaResponseModel alloc] initWithDictionary:resulst];
             
-            _isNeedCaptcha = captchaModel.b_data;
-            
+            _isNeedCaptcha = captchaModel.data;
         }
         
         [self.tableView reloadData];
@@ -111,38 +110,46 @@
     
     HFXOnlyTextTableCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXOnlyTextTableCellIdentifier];
     
+    
+    if (indexPath.row == 3) {
+        cell.captchaImageView.hidden = NO;
+    }else {
+        cell.captchaImageView.hidden = YES;
+    }
+    
     __weak typeof(self) weakSelf = self;
     
     switch (indexPath.row) {
         case 0:{
             cell.textField.placeholder = @"用户名（个性后缀）";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                weakSelf.requestModel.global_key = text;
+                weakSelf.registerRequestModel.global_key = text;
             };
-            break;
         }
+            break;
+        
         case 1:{
             cell.textField.placeholder = @"邮箱";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                weakSelf.requestModel.email = text;
+                weakSelf.registerRequestModel.email = text;
             };
-            break;
         }
+            break;
         case 2:{
             cell.textField.placeholder = @"设置密码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                weakSelf.requestModel.password = text;
+                weakSelf.registerRequestModel.password = text;
             
             };
-            break;
         }
+            break;
         default:{
             cell.textField.placeholder = @"验证码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                weakSelf.requestModel.j_captcha = text;
+                weakSelf.registerRequestModel.j_captcha = text;
             };
-            break;
         }
+            break;
     }
     
     return cell;
@@ -153,15 +160,20 @@
 
 - (void)protocolLabelOnClicked:(UITapGestureRecognizer*)gasture {
     
+    HFXProtocolPageViewController *VC = [[HFXProtocolPageViewController alloc]init];
+    
+//    UINavigationController *naviga = [[UINavigationController alloc]initWithRootViewController:VC];
+    
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 
 - (IBAction)registerButton:(id)sender {
     
-    [[HFXNetWorkManager shareInstance] registerWithRequestModel:self.requestModel completionHandler:^(id resulst, NSError *error) {
+    [[HFXNetWorkManager shareInstance] registerWithRequestModel:self.registerRequestModel completionHandler:^(id resulst, NSError *error) {
         if (error.code == ErrorTypeCaptcha) {
-            [self isNeedCaptcha];
-            NSLog(@"错误");
+             NSLog(@"错误,%@",error);
+            [self isNeedCaptchaJudge];
         }else if (resulst) {
             NSLog(@"注册成功:%@",resulst);
         }
@@ -175,12 +187,11 @@
 
 #pragma mark - Custom Accessors
 
-- (HFXRegisterRequestModel *)requestModel {
-    
-    if (!_requestModel) {
-        _requestModel = [[HFXRegisterRequestModel alloc]init];
+- (HFXRegisterRequestModel *)registerRequestModel {
+    if (!_registerRequestModel) {
+        _registerRequestModel = [[HFXRegisterRequestModel alloc]init];
     }
-    return _requestModel;
+    return _registerRequestModel;
 }
 
 @end

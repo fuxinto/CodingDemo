@@ -9,14 +9,25 @@
 #import "HFXOnlyTextTableCell.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
+@interface HFXOnlyTextTableCell () {
+    UIView *view;
+}
 
+@end
 @implementation HFXOnlyTextTableCell 
+
+
 
 - (void)cellDidLoadSubView {
     
+    view = [[UIView alloc]init];
     [super cellDidLoadSubView];
+    view.backgroundColor = [UIColor grayColor];
+    
+    [self.contentView addSubview:view];
     [self.contentView addSubview:self.textField];
     [self.contentView addSubview:self.captchaImageView];
+    
     
     
     __weak typeof(self) weakSelf = self;
@@ -28,6 +39,13 @@
 
 - (void)cellDidAdjustAutoLayout {
     [super cellDidAdjustAutoLayout];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.mas_equalTo(18);
+        make.trailing.mas_equalTo(0);
+        make.top.mas_equalTo(43);
+        make.bottom.mas_equalTo(0);
+    }];
     
     [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.mas_equalTo(18);
@@ -68,6 +86,20 @@
     if (self.textFieldDidChangeBlock) {
         self.textFieldDidChangeBlock([textField.text stringByAppendingString:string]);
     }
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    view.backgroundColor = [UIColor whiteColor];
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    
+    view.backgroundColor = [UIColor grayColor];
     
     return YES;
 }

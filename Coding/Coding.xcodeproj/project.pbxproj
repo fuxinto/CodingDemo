@@ -31,6 +31,11 @@
 		332BCED71D9BC12C00D0D0E3 /* NSString+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCED61D9BC12C00D0D0E3 /* NSString+HFXCategory.m */; };
 		332BCEDB1D9BD7EB00D0D0E3 /* HFXTapImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */; };
 		332BCEDE1D9BDA9800D0D0E3 /* HFXAPPMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 332BCEDD1D9BDA9800D0D0E3 /* HFXAPPMacro.m */; };
+		3384E5F71D9CB70B00544A12 /* HFXLoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E5F61D9CB70B00544A12 /* HFXLoginPageViewController.m */; };
+		3384E5FA1D9CE96800544A12 /* HFXLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E5F91D9CE96800544A12 /* HFXLoginTableViewCell.m */; };
+		3384E5FD1D9CED1900544A12 /* HFXLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E5FC1D9CED1900544A12 /* HFXLoginRequestModel.m */; };
+		3384E6001D9D0DA700544A12 /* HFXProtocolPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3384E5FF1D9D0DA700544A12 /* HFXProtocolPageViewController.m */; };
+		3384E6041D9D16AD00544A12 /* service_terms.html in Resources */ = {isa = PBXBuildFile; fileRef = 3384E6031D9D16AD00544A12 /* service_terms.html */; };
 		33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */; };
 		33F08C561D9A1BA600B655AB /* Public.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F08C551D9A1BA600B655AB /* Public.storyboard */; };
 		33F08C5A1D9A1BD600B655AB /* HFXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */; };
@@ -113,6 +118,15 @@
 		332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTapImageView.m; sourceTree = "<group>"; };
 		332BCEDC1D9BDA9800D0D0E3 /* HFXAPPMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXAPPMacro.h; sourceTree = "<group>"; };
 		332BCEDD1D9BDA9800D0D0E3 /* HFXAPPMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXAPPMacro.m; sourceTree = "<group>"; };
+		3384E5F51D9CB70B00544A12 /* HFXLoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXLoginPageViewController.h; sourceTree = "<group>"; };
+		3384E5F61D9CB70B00544A12 /* HFXLoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXLoginPageViewController.m; sourceTree = "<group>"; };
+		3384E5F81D9CE96800544A12 /* HFXLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXLoginTableViewCell.h; sourceTree = "<group>"; };
+		3384E5F91D9CE96800544A12 /* HFXLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXLoginTableViewCell.m; sourceTree = "<group>"; };
+		3384E5FB1D9CED1900544A12 /* HFXLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXLoginRequestModel.h; sourceTree = "<group>"; };
+		3384E5FC1D9CED1900544A12 /* HFXLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXLoginRequestModel.m; sourceTree = "<group>"; };
+		3384E5FE1D9D0DA700544A12 /* HFXProtocolPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXProtocolPageViewController.h; sourceTree = "<group>"; };
+		3384E5FF1D9D0DA700544A12 /* HFXProtocolPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXProtocolPageViewController.m; sourceTree = "<group>"; };
+		3384E6031D9D16AD00544A12 /* service_terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = service_terms.html; sourceTree = "<group>"; };
 		33F08C501D9A094B00B655AB /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		33F08C511D9A098400B655AB /* HFXStoryboardMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXStoryboardMacro.h; sourceTree = "<group>"; };
 		33F08C521D9A098400B655AB /* HFXStoryboardMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXStoryboardMacro.m; sourceTree = "<group>"; };
@@ -257,6 +271,7 @@
 		330D4C5C1D98D7EB003EB51E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3384E6031D9D16AD00544A12 /* service_terms.html */,
 				330D4C5D1D98D868003EB51E /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -372,6 +387,8 @@
 			children = (
 				332BCECA1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.h */,
 				332BCECB1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m */,
+				3384E5FB1D9CED1900544A12 /* HFXLoginRequestModel.h */,
+				3384E5FC1D9CED1900544A12 /* HFXLoginRequestModel.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -415,6 +432,10 @@
 				33F08C591D9A1BD600B655AB /* HFXGuideViewController.m */,
 				33F08C681D9A5D1F00B655AB /* HFXRegisterViewController.h */,
 				33F08C691D9A5D1F00B655AB /* HFXRegisterViewController.m */,
+				3384E5F51D9CB70B00544A12 /* HFXLoginPageViewController.h */,
+				3384E5F61D9CB70B00544A12 /* HFXLoginPageViewController.m */,
+				3384E5FE1D9D0DA700544A12 /* HFXProtocolPageViewController.h */,
+				3384E5FF1D9D0DA700544A12 /* HFXProtocolPageViewController.m */,
 			);
 			name = Guide;
 			sourceTree = "<group>";
@@ -426,6 +447,8 @@
 				33F08C701D9A686B00B655AB /* HFXOnlyTextTableCell.m */,
 				332BCED91D9BD7EB00D0D0E3 /* HFXTapImageView.h */,
 				332BCEDA1D9BD7EB00D0D0E3 /* HFXTapImageView.m */,
+				3384E5F81D9CE96800544A12 /* HFXLoginTableViewCell.h */,
+				3384E5F91D9CE96800544A12 /* HFXLoginTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +587,7 @@
 				330D4C5E1D98D868003EB51E /* Assets.xcassets in Resources */,
 				330D4C791D98F792003EB51E /* Main.storyboard in Resources */,
 				33F08C561D9A1BA600B655AB /* Public.storyboard in Resources */,
+				3384E6041D9D16AD00544A12 /* service_terms.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,12 +669,15 @@
 				332BCED71D9BC12C00D0D0E3 /* NSString+HFXCategory.m in Sources */,
 				33F08C6D1D9A672900B655AB /* HFXBaseTableViewCell.m in Sources */,
 				330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */,
+				3384E6001D9D0DA700544A12 /* HFXProtocolPageViewController.m in Sources */,
+				3384E5F71D9CB70B00544A12 /* HFXLoginPageViewController.m in Sources */,
 				330D4C581D98CD73003EB51E /* HFXBaseViewController.m in Sources */,
 				332BCEC71D9BA3A600D0D0E3 /* HFXNetWorkManager.m in Sources */,
 				330D4C6E1D98F72C003EB51E /* HFXTaskViewController.m in Sources */,
 				332BCECC1D9BB0F300D0D0E3 /* HFXRegisterRequestModel.m in Sources */,
 				33F08C601D9A1E1300B655AB /* UIView+HFXCategory.m in Sources */,
 				33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */,
+				3384E5FD1D9CED1900544A12 /* HFXLoginRequestModel.m in Sources */,
 				332BCED21D9BB89600D0D0E3 /* BasesModel.m in Sources */,
 				330D4C5B1D98CD93003EB51E /* HFXNavigationViewController.m in Sources */,
 				33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */,
@@ -660,6 +687,7 @@
 				330D4C741D98F757003EB51E /* HFXMessageViewController.m in Sources */,
 				330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */,
 				330D4C511D98CC02003EB51E /* HFXAppDelegate.m in Sources */,
+				3384E5FA1D9CE96800544A12 /* HFXLoginTableViewCell.m in Sources */,
 				332BCEDB1D9BD7EB00D0D0E3 /* HFXTapImageView.m in Sources */,
 				33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */,
 				330D4C1D1D98CB8B003EB51E /* main.m in Sources */,

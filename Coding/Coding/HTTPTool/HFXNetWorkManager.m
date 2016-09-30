@@ -40,6 +40,8 @@ static HFXNetWorkManager *netWorkManager = nil;
                parametes:(NSDictionary *)parametes
        completionHandler:(CompletionHandler)completionHandler;
 
+
+
 @end
 
 @implementation HFXNetWorkManager
@@ -76,11 +78,35 @@ static HFXNetWorkManager *netWorkManager = nil;
 
 #pragma mark - API
 
-- (void)isNeedCaptchaWithCompletionHandler:(CompletionHandler)completionHandler {
+- (void)registerIsNeedCaptchaWithCompletionHandler:(CompletionHandler)completionHandler {
     
     [self getWithURLString:kRegisterNeedCaptcha parametes:nil completionHandler:^(id resulst, NSError *error) {
-        
+    
         completionHandler(resulst,error);
+    }];
+}
+
+
+- (void)loginIsNeedCaptchaWithCompletionHandler:(CompletionHandler)completionHandler{
+    
+    [self getWithURLString:kLoginNeedCaptcha parametes:nil completionHandler:^(id resulst, NSError *error) {
+        completionHandler(resulst,error);
+    }];
+}
+
+- (void)loginWithRequestModel:(HFXLoginRequestModel *)loginModel completionHandler:(CompletionHandler)completionHandler {
+    
+    loginModel.password = [loginModel.password sha1];
+    
+    [self postWithURLString:kRegisterAPI parametes:[loginModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
+     
+        if (error) {
+            
+            completionHandler(nil, error);
+        } else {
+            completionHandler(resulst, nil);
+        }
+
     }];
 }
 

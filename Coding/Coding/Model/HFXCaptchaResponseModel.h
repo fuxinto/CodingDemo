@@ -10,7 +10,7 @@
 
 @interface HFXCaptchaResponseModel : BasesModel
 
-@property (assign, nonatomic, getter=isData) BOOL b_data;
-@property (copy, nonatomic) NSNumber *n_code;
+@property (assign, nonatomic, getter=isData) BOOL data;
+@property (copy, nonatomic) NSNumber *code;
 
 @end

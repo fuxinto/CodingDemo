@@ -9,6 +9,7 @@
 #import "HFXGuideViewController.h"
 #import "Masonry.h"
 #import "HFXRegisterViewController.h"
+#import "HFXLoginPageViewController.h"
 
 @interface HFXGuideViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -21,10 +22,20 @@
 - (void)loadScrollView;
 
 
+/**
+ 注册按钮方法
+
+ @param sender 按钮
+ */
 - (IBAction)registerButtonOnClicker:(id)sender;
 
 
 
+/**
+ 登录按钮方法
+
+ @param sender 按钮
+ */
 - (IBAction)loginButtonOnClicked:(id)sender;
 
 
@@ -108,6 +119,7 @@
 
 - (IBAction)loginButtonOnClicked:(id)sender {
     
-    
+    HFXLoginPageViewController *VC = (HFXLoginPageViewController *)[UIStoryboard storyboardWithName:HFXPublicStoryboardName instantiateWithIdentifier:HFXLoginPageIdentifier];
+    [self presentViewController:VC animated:YES completion:nil];
 }
 @end
