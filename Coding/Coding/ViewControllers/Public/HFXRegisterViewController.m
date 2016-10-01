@@ -117,6 +117,8 @@
         cell.captchaImageView.hidden = YES;
     }
     
+    cell.textField.placeHolderColor = [UIColor colorWithHex:0x999999 alpha:0.5];
+    cell.cliCkColor = [UIColor grayColor];
     __weak typeof(self) weakSelf = self;
     
     switch (indexPath.row) {
@@ -136,6 +138,7 @@
         }
             break;
         case 2:{
+            cell.textField.secureTextEntry = YES;
             cell.textField.placeholder = @"设置密码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
                 weakSelf.registerRequestModel.password = text;
@@ -161,8 +164,6 @@
 - (void)protocolLabelOnClicked:(UITapGestureRecognizer*)gasture {
     
     HFXProtocolPageViewController *VC = [[HFXProtocolPageViewController alloc]init];
-    
-//    UINavigationController *naviga = [[UINavigationController alloc]initWithRootViewController:VC];
     
     [self.navigationController pushViewController:VC animated:YES];
     

@@ -43,5 +43,20 @@
     }];
 }
 
+- (BOOL)archive {
+    return [NSKeyedArchiver archiveRootObject:self toFile:[self archivePath]];
+}
+
++ (instancetype)unarchive {
+    
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+}
+
+- (NSString *)archivePath {
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *name = NSStringFromClass(self.class);
+    return[path stringByAppendingPathComponent:name];
+}
+
 
 @end

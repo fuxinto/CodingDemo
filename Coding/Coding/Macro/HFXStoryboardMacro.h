@@ -12,7 +12,7 @@
 #pragma mark - Storyboard Name 
 
 UIKIT_EXTERN NSString *const HFXPublicStoryboardName;
-
+UIKIT_EXTERN NSString *const HFXMainStoryboardName;
 
 
 #pragma mark - Storyboard ID

@@ -22,9 +22,11 @@
     
     view = [[UIView alloc]init];
     [super cellDidLoadSubView];
-    view.backgroundColor = [UIColor grayColor];
+    self.backgroundColor = [UIColor clearColor];
     
     [self.contentView addSubview:view];
+    view.backgroundColor = [UIColor grayColor];
+    
     [self.contentView addSubview:self.textField];
     [self.contentView addSubview:self.captchaImageView];
     
@@ -92,7 +94,7 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = self.cliCkColor;
     
     return YES;
 }

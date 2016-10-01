@@ -17,4 +17,16 @@
 - (void)showHUDQueryStr:(NSString *)titleStr;
 - (void)hideHUDQuery;
 
+
+/**
+ *  归档
+ */
+- (BOOL)archive;
+
+/**
+ *  解档
+ */
++ (instancetype)unarchive;
+
+
 @end

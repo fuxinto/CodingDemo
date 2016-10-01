@@ -15,5 +15,6 @@
 #import "UIStoryboard+HFXCategory.h"
 #import "UIImage+HFXCategory.h"
 #import "NSString+HFXCategory.h"
+#import "UITextField+HFXCategory.h"
 
 #endif /* HFXAllCategory_h */

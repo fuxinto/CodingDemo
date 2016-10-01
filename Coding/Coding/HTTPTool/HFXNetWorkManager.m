@@ -8,6 +8,7 @@
 
 #import "HFXNetWorkManager.h"
 #import "AFNetworking.h"
+#import "HFXUserInfoModel.h"
 
 #import <YYModel/YYModel.h>
 
@@ -104,9 +105,11 @@ static HFXNetWorkManager *netWorkManager = nil;
             
             completionHandler(nil, error);
         } else {
+            HFXUserInfoModel *user = [HFXUserInfoModel yy_modelWithDictionary:resulst[@"data"]];
+            
+            [user archive];
             completionHandler(resulst, nil);
         }
-
     }];
 }
 
@@ -126,6 +129,9 @@ static HFXNetWorkManager *netWorkManager = nil;
             }
             completionHandler(nil, error);
         } else {
+            HFXUserInfoModel *user = [HFXUserInfoModel yy_modelWithDictionary:resulst[@"data"]];
+            
+            [user archive];
             completionHandler(resulst, nil);
         }
     }];
@@ -198,8 +204,17 @@ static HFXNetWorkManager *netWorkManager = nil;
 
 - (AFHTTPSessionManager *)sessionManager {
     if (!_sessionManager) {
+        NSURL *url = [NSURL URLWithString:HFXBaseURLString];
+        
         _sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:HFXBaseURLString]];
         _sessionManager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
+        [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [_sessionManager.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
+        _sessionManager.securityPolicy.allowInvalidCertificates = YES;
+        _sessionManager.securityPolicy.validatesDomainName = NO;
+        
     }
     return _sessionManager;
 }

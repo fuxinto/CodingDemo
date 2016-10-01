@@ -120,6 +120,11 @@
 - (IBAction)loginButtonOnClicked:(id)sender {
     
     HFXLoginPageViewController *VC = (HFXLoginPageViewController *)[UIStoryboard storyboardWithName:HFXPublicStoryboardName instantiateWithIdentifier:HFXLoginPageIdentifier];
-    [self presentViewController:VC animated:YES completion:nil];
+    
+    UINavigationController *naviga = [[UINavigationController alloc]initWithRootViewController:VC];
+    
+    naviga.navigationBarHidden = YES;
+
+    [self presentViewController:naviga animated:YES completion:nil];
 }
 @end

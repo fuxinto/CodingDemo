@@ -15,10 +15,12 @@
                instantiateWithIdentifier:(NSString *)identifier {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:name bundle:nil];
+    if (identifier) {
+        return [storyboard instantiateViewControllerWithIdentifier:identifier];
+    } else {
+        return [storyboard instantiateInitialViewController];
+    }
     
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:identifier];
-    
-    return vc;
 }
 
 @end

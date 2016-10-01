@@ -13,7 +13,7 @@
 <UITextFieldDelegate>
 
 @property (strong, nonatomic) UITextField *textField;
-
+@property (strong, nonatomic) UIColor *cliCkColor;
 @property (strong, nonatomic) void (^textFieldDidChangeBlock)(NSString *text);
 
 @property (strong, nonatomic) HFXTapImageView *captchaImageView;

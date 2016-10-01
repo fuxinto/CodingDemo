@@ -8,6 +8,8 @@
 
 #import "HFXStoryboardMacro.h"
 
+NSString *const HFXMainStoryboardName = @"Main";
+
 NSString *const HFXPublicStoryboardName = @"Public";
 
 

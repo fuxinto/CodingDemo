@@ -8,6 +8,10 @@
 
 #import "HFXAppDelegate.h"
 #import "HFXGuideViewController.h"
+#import "SDWebImageManager.h"
+#import "HFXUserInfoModel.h"
+#import "HFXRootTabBarController.h"
+
 
 @interface HFXAppDelegate ()
 
@@ -23,13 +27,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    
+    //sd加载的数据类型
+    [[[SDWebImageManager sharedManager] imageDownloader] setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" forHTTPHeaderField:@"Accept"];
+    
     [self customAppearance];
     
-    BOOL isFirstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirstLaunch"];
-    if (!isFirstLaunch) {
-        [self setupGuidePage];
+    //BOOL isFirstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirstLaunch"];
+    
+    if ([HFXUserInfoModel unarchive]) {
+        [self setupRootViewController];
     } else {
-        
+        [self setupGuidePage];
     }
 
     
@@ -70,6 +81,12 @@
     
     self.window.rootViewController = guide;
     
+}
+
+- (void)setupRootViewController {
+    
+    HFXRootTabBarController *tabbar = (HFXRootTabBarController *)[UIStoryboard storyboardWithName:HFXMainStoryboardName instantiateWithIdentifier:nil];
+    self.window.rootViewController = tabbar;
 }
 
 #pragma mark - Private

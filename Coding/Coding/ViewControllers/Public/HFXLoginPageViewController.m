@@ -7,7 +7,7 @@
 //
 
 #import "HFXLoginPageViewController.h"
-#import "HFXLoginTableViewCell.h"
+
 #import "HFXRegisterViewController.h"
 #import "HFXOnlyTextTableCell.h"
 
@@ -46,6 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+     
         
     [self.tableView registerClass:[HFXOnlyTextTableCell class] forCellReuseIdentifier:HFXOnlyTextTableCellIdentifier];
 
@@ -94,7 +95,8 @@
     }else {
         cell.captchaImageView.hidden = YES;
     }
-    cell.backgroundColor = [UIColor clearColor];
+    cell.textField.placeHolderColor = [UIColor colorWithR:223 G:223 B:223 alpha:0.5];
+    cell.cliCkColor = [UIColor whiteColor];
     
     __weak typeof(self) weakSelf = self;
     switch (indexPath.row) {
@@ -137,7 +139,6 @@
     UINavigationController *naviga = [[UINavigationController alloc]initWithRootViewController:VC];
     
     [self presentViewController:naviga animated:YES completion:nil];
-    
 }
 
 - (IBAction)loginButtonClick:(id)sender {
