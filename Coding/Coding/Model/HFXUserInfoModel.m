@@ -1,5 +1,7 @@
 #import "HFXUserInfoModel.h"
 #import "YYModel.h"
+
+static HFXUserInfoModel *userInfoModel = nil;
 @implementation HFXUserInfoModel
 
 
@@ -10,6 +12,13 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self yy_modelEncodeWithCoder:aCoder];
+}
+
++(instancetype)defaultInfo {
+    if (!userInfoModel) {
+        userInfoModel = [self unarchive];
+    }
+    return userInfoModel;
 }
 
 @end

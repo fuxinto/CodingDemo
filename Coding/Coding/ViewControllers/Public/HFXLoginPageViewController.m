@@ -7,9 +7,12 @@
 //
 
 #import "HFXLoginPageViewController.h"
-
+#import "HFXAppDelegate.h"
 #import "HFXRegisterViewController.h"
 #import "HFXOnlyTextTableCell.h"
+#import "Masonry.h"
+
+
 
 @interface HFXLoginPageViewController ()
 <UITableViewDelegate,UITableViewDataSource> {
@@ -17,6 +20,7 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) HFXLoginRequestModel *loginRequestModel;
+@property (strong, nonatomic) UIImageView *backImageView;
 /**
  取消按钮
 
@@ -46,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     
+     self.tableView.backgroundView = self.backImageView;
         
     [self.tableView registerClass:[HFXOnlyTextTableCell class] forCellReuseIdentifier:HFXOnlyTextTableCellIdentifier];
 
@@ -108,6 +112,7 @@
         }
             break;
         case 1:{
+            cell.textField.secureTextEntry = YES;
             cell.textField.placeholder = @"密码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
                 self.loginRequestModel.password = text;
@@ -143,15 +148,39 @@
 
 - (IBAction)loginButtonClick:(id)sender {
     
+    [self showHUDQueryStr:@"正在登录..."];
+    
     [[HFXNetWorkManager shareInstance] loginWithRequestModel:self.loginRequestModel completionHandler:^(id resulst, NSError *error) {
+        
+        [self hideHUDQuery];
         if (error) {
-            NSLog(@"登录失败");
+            [self showTipsWithError:error];
         }else {
-            NSLog(@"登录成功");
+            HFXAppDelegate *appDelegate = (HFXAppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDelegate setupRootViewController];
         }
     }];
 }
 
+
+
+
+#pragma mark - Custom Accessors
+
+- (UIImageView *)backImageView {
+    if (!_backImageView) {
+        UIImage *image = [UIImage imageNamed:@"STARTIMAGE"];
+        _backImageView = [[UIImageView alloc] initWithImage:image];
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [_backImageView addSubview:effectView];
+        
+        [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(_backImageView);
+        }];
+    }
+    return _backImageView;
+}
 
 - (HFXLoginRequestModel *)loginRequestModel {
     if (!_loginRequestModel) {

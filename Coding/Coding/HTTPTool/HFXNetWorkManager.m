@@ -98,6 +98,7 @@ static HFXNetWorkManager *netWorkManager = nil;
 - (void)loginWithRequestModel:(HFXLoginRequestModel *)loginModel completionHandler:(CompletionHandler)completionHandler {
     
     loginModel.password = [loginModel.password sha1];
+    NSLog(@"%@",[loginModel yy_modelToJSONObject]);
     
     [self postWithURLString:kRegisterAPI parametes:[loginModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
      
@@ -143,19 +144,22 @@ static HFXNetWorkManager *netWorkManager = nil;
                parametes:(NSDictionary *)parametes
        completionHandler:(CompletionHandler)completionHandler {
     
-    [self.sessionManager POST:urlString parameters:parametes
+    NSLog(@"%@",parametes);
+    
+    [self.sessionManager POST:urlString
+                   parameters:parametes
                     progress:nil
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                          
-                         NSError *error = [self handlerErrorWithData:responseObject];
+                NSError *error = [self handlerErrorWithData:responseObject];
                          
-                         if (completionHandler) {
-                             completionHandler(responseObject,error);
-                         }
-                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                         if (completionHandler) {
-                             completionHandler(nil,error);
-                         }
+                if (completionHandler) {
+                    completionHandler(responseObject,error);
+                    }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                if (completionHandler) {
+                    completionHandler(nil,error);
+                }
                      }];
 }
 

@@ -13,7 +13,6 @@
 @property (strong, nonatomic) NSString *account;
 @property (strong, nonatomic) NSString *password;
 @property (strong, nonatomic) NSString *remember_me;
-
 @property (strong, nonatomic) NSString *j_captcha;
 
 

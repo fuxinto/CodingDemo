@@ -10,4 +10,14 @@
 
 @implementation HFXLoginRequestModel
 
+
+- (instancetype)initWithDictionary:(NSDictionary *)dic{
+    self = [super initWithDictionary:dic];
+    if (self) {
+        _remember_me = @"true";
+    }
+    
+    return self;
+}
+
 @end

@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+/**
+ 跳转到主页面
+ */
+- (void)setupRootViewController;
 @end
 

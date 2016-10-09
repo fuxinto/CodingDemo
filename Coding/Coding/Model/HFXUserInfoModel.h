@@ -3,6 +3,9 @@
 
 @interface HFXUserInfoModel : NSObject
 
+// 获取自身对象
++(instancetype)defaultInfo;
+
 @property (copy, nonatomic) NSString *lavatar;
 @property (copy, nonatomic) NSString *last_activity_at;
 @property (copy, nonatomic) NSString *created_at;

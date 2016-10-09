@@ -28,5 +28,9 @@
     return output;
 }
 
+- (NSString *)imageURLStringWithSize:(CGFloat)size {
+    return [self stringByAppendingString:[NSString stringWithFormat:@"?imageMogr2/auto-orient/thumbnail/!%.0fx%.0fr", size, size]];
+    
+}
 
 @end

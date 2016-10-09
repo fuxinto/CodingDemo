@@ -20,6 +20,6 @@ UIKIT_EXTERN NSString *const HFXMainStoryboardName;
 UIKIT_EXTERN NSString *const HFXGuidePageIdentifier;
 UIKIT_EXTERN NSString *const HFXRegisterPageIdentifier;
 UIKIT_EXTERN NSString *const HFXLoginPageIdentifier;
-
+UIKIT_EXTERN NSString *const HFXMePageIdentifier;
 UIKIT_EXTERN NSString *const HFXOnlyTextTableCellIdentifier;
 
