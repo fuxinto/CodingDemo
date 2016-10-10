@@ -40,7 +40,6 @@
     if ([HFXUserInfoModel unarchive]) {
         [self setupRootViewController];
     } else {
-       // [self setupRootViewController];
         [self setupGuidePage];
     }
 

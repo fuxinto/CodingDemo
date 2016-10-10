@@ -98,8 +98,7 @@ static HFXNetWorkManager *netWorkManager = nil;
 - (void)loginWithRequestModel:(HFXLoginRequestModel *)loginModel completionHandler:(CompletionHandler)completionHandler {
     
     loginModel.password = [loginModel.password sha1];
-    NSLog(@"%@",[loginModel yy_modelToJSONObject]);
-    
+        
     [self postWithURLString:kRegisterAPI parametes:[loginModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
      
         if (error) {

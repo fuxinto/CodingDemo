@@ -16,5 +16,6 @@ NSString *const HFXPublicStoryboardName = @"Public";
 NSString *const HFXGuidePageIdentifier = @"HFXGuideViewController";
 NSString *const HFXRegisterPageIdentifier = @"HFXRegisterViewController";
 NSString *const HFXLoginPageIdentifier = @"HFXLoginPageViewController";
-NSString *const HFXMePageIdentifier = @"UITabViewCell";
+NSString *const HFXCellDefaultIdentifier = @"UITabViewCell";
 NSString *const HFXOnlyTextTableCellIdentifier = @"HFXOnlyTextTableCell";
+NSString *const HFXSettingsPageIdentifier = @"HFXSettingsViewController";

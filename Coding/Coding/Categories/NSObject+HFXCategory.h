@@ -28,5 +28,6 @@
  */
 + (instancetype)unarchive;
 
+- (NSString *)archivePath;
 
 @end

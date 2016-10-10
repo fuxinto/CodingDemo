@@ -154,7 +154,10 @@
         
         [self hideHUDQuery];
         if (error) {
-            [self showTipsWithError:error];
+            HFXAppDelegate *appDelegate = (HFXAppDelegate *)[UIApplication sharedApplication].delegate;
+            [appDelegate setupRootViewController];
+
+//            [self showTipsWithError:error];
         }else {
             HFXAppDelegate *appDelegate = (HFXAppDelegate *)[UIApplication sharedApplication].delegate;
             [appDelegate setupRootViewController];

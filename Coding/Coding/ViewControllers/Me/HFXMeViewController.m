@@ -8,6 +8,7 @@
 
 #import "HFXMeViewController.h"
 #import "HFXUserInfoView.h"
+#import "HFXSettingsViewController.h"
 @interface HFXMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray *cellInfo;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     self.title = @"我";
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:HFXMePageIdentifier];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:HFXCellDefaultIdentifier];
     self.tableView.backgroundColor = [UIColor colorWithR:228
                                                        G:228
                                                        B:228
@@ -46,6 +47,10 @@
 }
 
 - (void)settingButtonOnClicked:(UIButton *)sender {
+    
+    HFXSettingsViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:HFXSettingsPageIdentifier];
+    VC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 
@@ -78,9 +83,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXMePageIdentifier];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone; 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXCellDefaultIdentifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     cell.separatorInset = UIEdgeInsetsMake(0, 18, 0, 0);
     
     NSDictionary *info = self.cellInfo[indexPath.section][indexPath.row];

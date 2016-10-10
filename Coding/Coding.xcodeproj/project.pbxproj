@@ -37,6 +37,7 @@
 		3384E6041D9D16AD00544A12 /* service_terms.html in Resources */ = {isa = PBXBuildFile; fileRef = 3384E6031D9D16AD00544A12 /* service_terms.html */; };
 		339687461D9E0AF300E665CE /* HFXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 339687451D9E0AF300E665CE /* HFXUserInfoModel.m */; };
 		339687491D9E506D00E665CE /* UITextField+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 339687481D9E506D00E665CE /* UITextField+HFXCategory.m */; };
+		33CE3A0F1DA9D32300E0733C /* HFXSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3A0E1DA9D32300E0733C /* HFXSettingsViewController.m */; };
 		33D1FEFB1DA88A050007710B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D1FEFA1DA88A050007710B /* Images.xcassets */; };
 		33D1FF011DA907BF0007710B /* HFXUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D1FF001DA907BF0007710B /* HFXUserInfoView.m */; };
 		33D1FF041DA90B100007710B /* NSAttributedString+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D1FF031DA90B100007710B /* NSAttributedString+HFXCategory.m */; };
@@ -133,6 +134,8 @@
 		339687451D9E0AF300E665CE /* HFXUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXUserInfoModel.m; sourceTree = "<group>"; };
 		339687471D9E506D00E665CE /* UITextField+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HFXCategory.h"; sourceTree = "<group>"; };
 		339687481D9E506D00E665CE /* UITextField+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HFXCategory.m"; sourceTree = "<group>"; };
+		33CE3A0D1DA9D32300E0733C /* HFXSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXSettingsViewController.h; sourceTree = "<group>"; };
+		33CE3A0E1DA9D32300E0733C /* HFXSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXSettingsViewController.m; sourceTree = "<group>"; };
 		33D1FEFA1DA88A050007710B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33D1FEFF1DA907BF0007710B /* HFXUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXUserInfoView.h; sourceTree = "<group>"; };
 		33D1FF001DA907BF0007710B /* HFXUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXUserInfoView.m; sourceTree = "<group>"; };
@@ -344,6 +347,8 @@
 			children = (
 				330D4C751D98F761003EB51E /* HFXMeViewController.h */,
 				330D4C761D98F761003EB51E /* HFXMeViewController.m */,
+				33CE3A0D1DA9D32300E0733C /* HFXSettingsViewController.h */,
+				33CE3A0E1DA9D32300E0733C /* HFXSettingsViewController.m */,
 			);
 			name = Me;
 			path = ViewControllers/Me;
@@ -706,6 +711,7 @@
 				330D4C771D98F761003EB51E /* HFXMeViewController.m in Sources */,
 				330D4C741D98F757003EB51E /* HFXMessageViewController.m in Sources */,
 				33D1FF041DA90B100007710B /* NSAttributedString+HFXCategory.m in Sources */,
+				33CE3A0F1DA9D32300E0733C /* HFXSettingsViewController.m in Sources */,
 				330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */,
 				330D4C511D98CC02003EB51E /* HFXAppDelegate.m in Sources */,
 				33D1FF011DA907BF0007710B /* HFXUserInfoView.m in Sources */,
