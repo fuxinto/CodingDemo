@@ -20,5 +20,6 @@
 #define kScreenHeight       [UIScreen mainScreen].bounds.size.height
 
 #define kWindow ([UIApplication sharedApplication].keyWindow)
+#define kDocumentsPath      ([NSHomeDirectory() stringByAppendingPathComponent:@"Documents"])
 
 #endif /* AppMacro_h */

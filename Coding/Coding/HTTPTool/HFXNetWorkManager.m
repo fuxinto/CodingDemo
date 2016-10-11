@@ -95,11 +95,18 @@ static HFXNetWorkManager *netWorkManager = nil;
     }];
 }
 
+- (void)projectLisitWithRequestModel:(HFXProjectRequestModel *)projectLisitModel completionHandler:(CompletionHandler)completionHandler {
+    
+    [self getWithURLString:kProjectListAPI parametes:[projectLisitModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
+        completionHandler (resulst,error);
+    }];
+}
+
 - (void)loginWithRequestModel:(HFXLoginRequestModel *)loginModel completionHandler:(CompletionHandler)completionHandler {
     
     loginModel.password = [loginModel.password sha1];
         
-    [self postWithURLString:kRegisterAPI parametes:[loginModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
+    [self postWithURLString:kLoginAPI parametes:[loginModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
      
         if (error) {
             
@@ -108,6 +115,7 @@ static HFXNetWorkManager *netWorkManager = nil;
             HFXUserInfoModel *user = [HFXUserInfoModel yy_modelWithDictionary:resulst[@"data"]];
             
             [user archive];
+            
             completionHandler(resulst, nil);
         }
     }];
@@ -120,7 +128,7 @@ static HFXNetWorkManager *netWorkManager = nil;
     registerModel.password = [registerModel.password sha1];
     registerModel.confirm = registerModel.password;
     
-    [self postWithURLString:kRegisterAPI parametes:[registerModel yy_modelToJSONObject]  completionHandler:^(id resulst, NSError *error) {
+    [self postWithURLString:kRegisterAPI parametes:[registerModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
         
         if (error) {
             if (error.code == ErrorTypeCaptcha ||
@@ -129,7 +137,7 @@ static HFXNetWorkManager *netWorkManager = nil;
             }
             completionHandler(nil, error);
         } else {
-            HFXUserInfoModel *user = [HFXUserInfoModel yy_modelWithDictionary:resulst[@"data"]];
+            HFXUserInfoModel *user = [HFXUserInfoModel yy_modelWithDictionary: resulst[@"data"]];
             
             [user archive];
             completionHandler(resulst, nil);

@@ -28,6 +28,11 @@
  */
 + (instancetype)unarchive;
 
-- (NSString *)archivePath;
+/**
+ 删除归档
+
+ @return 是否成功
+ */
++ (BOOL)removeArchive;
 
 @end

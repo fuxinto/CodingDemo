@@ -19,6 +19,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +36,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Custom Accessors
+
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
+    [[UIApplication sharedApplication] setStatusBarStyle:statusBarStyle];
+}
+
+- (UIStatusBarStyle)statusBarStyle {
+    return [[UIApplication sharedApplication] statusBarStyle];
+}
+
 
 - (void)dealloc {
     NSLog(@"%@ dealloc", self.class);

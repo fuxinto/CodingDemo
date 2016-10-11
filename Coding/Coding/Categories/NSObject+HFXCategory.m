@@ -8,6 +8,9 @@
 
 #import "NSObject+HFXCategory.h"
 #import "MBProgressHUD.h"
+
+#define kArchivePath(path, name)   [path stringByAppendingPathComponent:name]
+
 @implementation NSObject (HFXCategory)
 
 - (void)showTipsWithMessage:(NSString *)message {
@@ -44,19 +47,16 @@
 }
 
 - (BOOL)archive {
-    return [NSKeyedArchiver archiveRootObject:self toFile:[self archivePath]];
+    return [NSKeyedArchiver archiveRootObject:self toFile:kArchivePath(kDocumentsPath, NSStringFromClass([self class]))];
 }
 
 + (instancetype)unarchive {
     
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:kArchivePath(kDocumentsPath, NSStringFromClass([self class]))];;
 }
 
-- (NSString *)archivePath {
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *name = NSStringFromClass(self.class);
-    return[path stringByAppendingPathComponent:name];
++ (BOOL)removeArchive {
+    return [[NSFileManager defaultManager] removeItemAtPath:kArchivePath(kDocumentsPath, NSStringFromClass([self class])) error:nil];
 }
-
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HFXBaseViewController : UIViewController
-
+@property (assign, nonatomic) UIStatusBarStyle statusBarStyle;
 @end

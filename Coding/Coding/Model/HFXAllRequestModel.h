@@ -14,4 +14,7 @@
 #import "HFXRegisterRequestModel.h"
 #import "HFXLoginRequestModel.h"
 #import "HFXUserInfoModel.h"
+#import "HFXProjectRequestModel.h"
+#import "ProjectListResponse.h"
+
 #endif /* HFXAllRequestModel_h */

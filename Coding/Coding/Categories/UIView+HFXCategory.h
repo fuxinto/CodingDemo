@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 
 @interface UIView (Layer)
 
 /**
  * IBInspectable 修饰符使用之后可以在故事板里面设置属性
  */
+@property (assign, nonatomic) CGFloat right;
+@property (assign, nonatomic) CGFloat height;
+@property (assign, nonatomic) CGSize size;
 
 @property (assign, nonatomic) IBInspectable CGFloat cornerRadius;
 @property (assign, nonatomic) IBInspectable CGFloat borderWidth;

@@ -9,13 +9,15 @@
 #import "HFXStoryboardMacro.h"
 
 NSString *const HFXMainStoryboardName = @"Main";
-
 NSString *const HFXPublicStoryboardName = @"Public";
 
 
 NSString *const HFXGuidePageIdentifier = @"HFXGuideViewController";
 NSString *const HFXRegisterPageIdentifier = @"HFXRegisterViewController";
 NSString *const HFXLoginPageIdentifier = @"HFXLoginPageViewController";
-NSString *const HFXCellDefaultIdentifier = @"UITabViewCell";
-NSString *const HFXOnlyTextTableCellIdentifier = @"HFXOnlyTextTableCell";
 NSString *const HFXSettingsPageIdentifier = @"HFXSettingsViewController";
+
+NSString *const HFXCellDefaultIdentifier = @"UITabViewCell";
+NSString *const HFXCellCustomIdentifier = @"CustomCell";
+
+NSString *const HFXOnlyTextTableCellIdentifier = @"HFXOnlyTextTableCell";

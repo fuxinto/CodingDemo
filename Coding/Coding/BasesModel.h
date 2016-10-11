@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface BasesModel : NSObject
-- (instancetype)initWithDictionary:(NSDictionary *)dic;
++ (NSDictionary *)modelCustomPropertyMapper;
 @end

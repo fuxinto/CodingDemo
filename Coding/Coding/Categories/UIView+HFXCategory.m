@@ -13,8 +13,39 @@
 /**
  * @dynamic 使用后让系统不创建后面属性的set，get方法，自己写
  */
-
+@dynamic right,height,size;
 @dynamic cornerRadius, borderWidth, borderColor;
+
+- (CGFloat)right {
+    return CGRectGetMaxY(self.frame);
+}
+
+- (void)setRight:(CGFloat)right {
+    CGRect frame = self.frame;
+    frame.origin.x = right-CGRectGetWidth(frame);
+    self.frame = frame;
+}
+
+- (CGFloat)height {
+    return CGRectGetHeight(self.frame);
+}
+
+- (void)setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;

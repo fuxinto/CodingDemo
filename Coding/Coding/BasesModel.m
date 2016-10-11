@@ -10,22 +10,8 @@
 
 @implementation BasesModel
 
-
-
-- (instancetype)initWithDictionary:(NSDictionary *)dic
-{
-    self = [super init];
-    if (self) {
-        
-        // 根据字典的数据给 model 属性设置
-        [self setValuesForKeysWithDictionary:dic];
-        // self.newId = dic[@"id"];
-    }
-    return self;
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"str_description"  : @"description"};
 }
 
-// 过滤掉字典中没有用到的 key
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    // 内部不用写
-}
 @end
