@@ -2,7 +2,7 @@
 //  HFXBubbleViewController.m
 //  Coding
 //
-//  Created by tens04 on 16/9/26.
+//  Created by tens04 on 16/10/12.
 //  Copyright © 2016年 fuxinto. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.borderColor = [UIColor randomColor];
 }
 
 - (void)didReceiveMemoryWarning {

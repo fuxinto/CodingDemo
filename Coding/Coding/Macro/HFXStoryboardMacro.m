@@ -16,6 +16,8 @@ NSString *const HFXGuidePageIdentifier = @"HFXGuideViewController";
 NSString *const HFXRegisterPageIdentifier = @"HFXRegisterViewController";
 NSString *const HFXLoginPageIdentifier = @"HFXLoginPageViewController";
 NSString *const HFXSettingsPageIdentifier = @"HFXSettingsViewController";
+NSString *const HFXBubblePageIdentifier = @"HFXBubbleViewController";
+
 
 NSString *const HFXCellDefaultIdentifier = @"UITabViewCell";
 NSString *const HFXCellCustomIdentifier = @"CustomCell";

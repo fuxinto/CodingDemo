@@ -15,6 +15,7 @@
 #define kRegisterNeedCaptcha                @"api/captcha/register"
 #define kGetCaptcha                         @"api/getCaptcha"
 #define kProjectListAPI                     @"api/projects"
+#define kTaskListAPI                        @"api/tasks/all"
 
 
 #endif /* APIMacro_h */

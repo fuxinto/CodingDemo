@@ -39,6 +39,8 @@
 
 }
 
+
+
 - (void)cellDidAdjustAutoLayout {
     [super cellDidAdjustAutoLayout];
     
@@ -92,6 +94,7 @@
     return YES;
 }
 
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
     view.backgroundColor = self.cliCkColor;
@@ -105,6 +108,7 @@
     
     return YES;
 }
+
 
 - (UITextField *)textField {
     if (!_textField) {

@@ -13,8 +13,18 @@
 /**
  * @dynamic 使用后让系统不创建后面属性的set，get方法，自己写
  */
-@dynamic right,height,size;
+@dynamic right,height,size,left;
 @dynamic cornerRadius, borderWidth, borderColor;
+
+- (CGFloat)left {
+    return CGRectGetMinX(self.frame);
+}
+
+- (void)setLeft:(CGFloat)left {
+    CGRect frame = self.frame;
+    frame.origin.x = left;
+    self.frame = frame;
+}
 
 - (CGFloat)right {
     return CGRectGetMaxY(self.frame);

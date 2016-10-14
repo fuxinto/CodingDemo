@@ -16,5 +16,9 @@
 #import "UIImage+HFXCategory.h"
 #import "NSString+HFXCategory.h"
 #import "UITextField+HFXCategory.h"
+#import "NSAttributedString+HFXCategory.h"
+#import "UIBarButtonItem+HFXCategory.h"
+#import "NSNumber+HFXCategory.h"
+
 
 #endif /* HFXAllCategory_h */

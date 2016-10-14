@@ -20,6 +20,8 @@ UIKIT_EXTERN NSString *const HFXMainStoryboardName;
 UIKIT_EXTERN NSString *const HFXGuidePageIdentifier;
 UIKIT_EXTERN NSString *const HFXRegisterPageIdentifier;
 UIKIT_EXTERN NSString *const HFXLoginPageIdentifier;
+UIKIT_EXTERN NSString *const HFXBubblePageIdentifier;
+
 
 UIKIT_EXTERN NSString *const HFXCellDefaultIdentifier;
 UIKIT_EXTERN NSString *const HFXCellCustomIdentifier;

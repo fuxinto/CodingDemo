@@ -2,12 +2,12 @@
 //  HFXBubbleViewController.h
 //  Coding
 //
-//  Created by tens04 on 16/9/26.
+//  Created by tens04 on 16/10/12.
 //  Copyright © 2016年 fuxinto. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HFXBaseViewController.h"
 
-@interface HFXBubbleViewController : UIViewController
+@interface HFXBubbleViewController : HFXBaseViewController
 
 @end

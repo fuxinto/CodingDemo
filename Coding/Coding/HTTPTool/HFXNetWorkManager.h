@@ -10,6 +10,7 @@
 #import "HFXRegisterRequestModel.h"
 #import "HFXLoginRequestModel.h"
 #import "HFXProjectRequestModel.h"
+#import "HFXTaskLisitRequestModel.h"
 
 typedef NS_ENUM(NSInteger, ErrorType) {
     ErrorTypeUserName = 1,
@@ -72,4 +73,13 @@ typedef void(^CompletionHandler)(id resulst, NSError *error);
  @param completionHandler 完成后的回调
  */
 - (void)projectLisitWithRequestModel:(HFXProjectRequestModel *)projectLisitModel completionHandler:(CompletionHandler)completionHandler;
+
+/**
+ 任务列表请求方法
+
+ @param taskLisitRequestMode 请求参数Model
+ @param completionHandler    完成后的回调
+ */
+- (void)taskLisitWithRequestModel:(HFXTaskLisitRequestModel *)taskLisitRequestMode completionHandler:(CompletionHandler)completionHandler;
+
 @end

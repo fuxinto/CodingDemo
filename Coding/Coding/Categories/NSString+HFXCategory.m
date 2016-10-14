@@ -29,7 +29,12 @@
 }
 
 - (NSString *)imageURLStringWithSize:(CGFloat)size {
-    return [self stringByAppendingString:[NSString stringWithFormat:@"?imageMogr2/auto-orient/thumbnail/!%.0fx%.0fr", size, size]];
+    
+    NSString *string = self;
+    if (![string hasPrefix:@"http"]) {
+        string = [@"https://coding.net/" stringByAppendingString:string];
+    }
+    return [string stringByAppendingString:[NSString stringWithFormat:@"?imageMogr2/auto-orient/thumbnail/!%.0fx%.0fr", size, size]];
     
 }
 

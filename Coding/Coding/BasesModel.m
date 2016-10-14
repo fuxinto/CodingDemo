@@ -7,11 +7,11 @@
 //
 
 #import "BasesModel.h"
-
+#import "NSObject+YYModel.h"
 @implementation BasesModel
 
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"str_description"  : @"description"};
+    return @{@"str_description"  : @"description",@"n_id": @"id"};
 }
 
 @end

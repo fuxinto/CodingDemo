@@ -16,5 +16,6 @@
 #import "HFXUserInfoModel.h"
 #import "HFXProjectRequestModel.h"
 #import "ProjectListResponse.h"
+#import "HFXTaskLisitRequestModel.h"
 
 #endif /* HFXAllRequestModel_h */

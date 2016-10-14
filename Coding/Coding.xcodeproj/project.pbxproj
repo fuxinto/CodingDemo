@@ -15,7 +15,6 @@
 		330D4C581D98CD73003EB51E /* HFXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C571D98CD73003EB51E /* HFXBaseViewController.m */; };
 		330D4C5B1D98CD93003EB51E /* HFXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C5A1D98CD93003EB51E /* HFXNavigationViewController.m */; };
 		330D4C5E1D98D868003EB51E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330D4C5D1D98D868003EB51E /* Assets.xcassets */; };
-		330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C701D98F749003EB51E /* HFXBubbleViewController.m */; };
 		330D4C791D98F792003EB51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330D4C781D98F792003EB51E /* Main.storyboard */; };
 		330D4C7C1D9904EB003EB51E /* UIColor+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */; };
 		330D4C841D9918F5003EB51E /* NSObject+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 330D4C831D9918F5003EB51E /* NSObject+HFXCategory.m */; };
@@ -58,6 +57,15 @@
 		33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C621D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m */; };
 		33F08C6D1D9A672900B655AB /* HFXBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C6C1D9A672900B655AB /* HFXBaseTableViewCell.m */; };
 		33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */; };
+		33F81BA51DAE11A700C0C3C9 /* HFXBubbleLisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BA41DAE11A700C0C3C9 /* HFXBubbleLisitViewController.m */; };
+		33F81BA81DAE20C100C0C3C9 /* HFXBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BA71DAE20C100C0C3C9 /* HFXBubbleViewController.m */; };
+		33F81BAB1DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BAA1DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.m */; };
+		33F81BB41DAE300700C0C3C9 /* Creator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BAD1DAE300700C0C3C9 /* Creator.m */; };
+		33F81BB51DAE300700C0C3C9 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BAF1DAE300700C0C3C9 /* TaskModel.m */; };
+		33F81BB61DAE300700C0C3C9 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BB11DAE300700C0C3C9 /* Owner.m */; };
+		33F81BB71DAE300700C0C3C9 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BB31DAE300700C0C3C9 /* Project.m */; };
+		33F81BBA1DAE52C900C0C3C9 /* HFXTaskLisitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BB91DAE52C900C0C3C9 /* HFXTaskLisitCell.m */; };
+		33F81BBD1DAE582D00C0C3C9 /* NSNumber+HFXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F81BBC1DAE582D00C0C3C9 /* NSNumber+HFXCategory.m */; };
 		39A8221C3AE3BA6E6EE62571 /* libPods-Coding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302D7D4E35510B9F395D5DB0 /* libPods-Coding.a */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +106,6 @@
 		330D4C5A1D98CD93003EB51E /* HFXNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFXNavigationViewController.m; path = BaseClass/HFXNavigationViewController.m; sourceTree = "<group>"; };
 		330D4C5D1D98D868003EB51E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		330D4C611D98F641003EB51E /* HFXRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFXRootTabBarController.h; path = ViewControllers/HFXRootTabBarController.h; sourceTree = "<group>"; };
-		330D4C6F1D98F749003EB51E /* HFXBubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBubbleViewController.h; sourceTree = "<group>"; };
-		330D4C701D98F749003EB51E /* HFXBubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXBubbleViewController.m; sourceTree = "<group>"; };
 		330D4C781D98F792003EB51E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ViewControllers/Main.storyboard; sourceTree = "<group>"; };
 		330D4C7A1D9904EB003EB51E /* UIColor+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HFXCategory.h"; sourceTree = "<group>"; };
 		330D4C7B1D9904EB003EB51E /* UIColor+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HFXCategory.m"; sourceTree = "<group>"; };
@@ -184,6 +190,24 @@
 		33F08C721D9A716800B655AB /* UIImage+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HFXCategory.h"; sourceTree = "<group>"; };
 		33F08C731D9A716800B655AB /* UIImage+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HFXCategory.m"; sourceTree = "<group>"; };
 		33F08C751D9A71AF00B655AB /* HFXAllCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFXAllCategory.h; sourceTree = "<group>"; };
+		33F81BA31DAE11A700C0C3C9 /* HFXBubbleLisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBubbleLisitViewController.h; sourceTree = "<group>"; };
+		33F81BA41DAE11A700C0C3C9 /* HFXBubbleLisitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXBubbleLisitViewController.m; sourceTree = "<group>"; };
+		33F81BA61DAE20C100C0C3C9 /* HFXBubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBubbleViewController.h; sourceTree = "<group>"; };
+		33F81BA71DAE20C100C0C3C9 /* HFXBubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXBubbleViewController.m; sourceTree = "<group>"; };
+		33F81BA91DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTaskLisitRequestModel.h; sourceTree = "<group>"; };
+		33F81BAA1DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTaskLisitRequestModel.m; sourceTree = "<group>"; };
+		33F81BAC1DAE300700C0C3C9 /* Creator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creator.h; sourceTree = "<group>"; };
+		33F81BAD1DAE300700C0C3C9 /* Creator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Creator.m; sourceTree = "<group>"; };
+		33F81BAE1DAE300700C0C3C9 /* TaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskModel.h; sourceTree = "<group>"; };
+		33F81BAF1DAE300700C0C3C9 /* TaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskModel.m; sourceTree = "<group>"; };
+		33F81BB01DAE300700C0C3C9 /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		33F81BB11DAE300700C0C3C9 /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
+		33F81BB21DAE300700C0C3C9 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		33F81BB31DAE300700C0C3C9 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		33F81BB81DAE52C900C0C3C9 /* HFXTaskLisitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXTaskLisitCell.h; sourceTree = "<group>"; };
+		33F81BB91DAE52C900C0C3C9 /* HFXTaskLisitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXTaskLisitCell.m; sourceTree = "<group>"; };
+		33F81BBB1DAE582D00C0C3C9 /* NSNumber+HFXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HFXCategory.h"; sourceTree = "<group>"; };
+		33F81BBC1DAE582D00C0C3C9 /* NSNumber+HFXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HFXCategory.m"; sourceTree = "<group>"; };
 		F34ACE62FB241FEC69CA662F /* Pods-Coding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coding/Pods-Coding.debug.xcconfig"; sourceTree = "<group>"; };
 		F67097A233771D9F2EF6F1BA /* Pods-Coding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coding/Pods-Coding.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,6 +377,8 @@
 				33D1FF031DA90B100007710B /* NSAttributedString+HFXCategory.m */,
 				3324AFCD1DACC082007EFFD5 /* UIBarButtonItem+HFXCategory.h */,
 				3324AFCE1DACC082007EFFD5 /* UIBarButtonItem+HFXCategory.m */,
+				33F81BBB1DAE582D00C0C3C9 /* NSNumber+HFXCategory.h */,
+				33F81BBC1DAE582D00C0C3C9 /* NSNumber+HFXCategory.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -360,8 +386,10 @@
 		330D4C641D98F6C2003EB51E /* Bubble */ = {
 			isa = PBXGroup;
 			children = (
-				330D4C6F1D98F749003EB51E /* HFXBubbleViewController.h */,
-				330D4C701D98F749003EB51E /* HFXBubbleViewController.m */,
+				33F81BA31DAE11A700C0C3C9 /* HFXBubbleLisitViewController.h */,
+				33F81BA41DAE11A700C0C3C9 /* HFXBubbleLisitViewController.m */,
+				33F81BA61DAE20C100C0C3C9 /* HFXBubbleViewController.h */,
+				33F81BA71DAE20C100C0C3C9 /* HFXBubbleViewController.m */,
 			);
 			name = Bubble;
 			path = ViewControllers/Bubble;
@@ -540,6 +568,16 @@
 		3324B02C1DAD0DC3007EFFD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33F81BAC1DAE300700C0C3C9 /* Creator.h */,
+				33F81BAD1DAE300700C0C3C9 /* Creator.m */,
+				33F81BAE1DAE300700C0C3C9 /* TaskModel.h */,
+				33F81BAF1DAE300700C0C3C9 /* TaskModel.m */,
+				33F81BB01DAE300700C0C3C9 /* Owner.h */,
+				33F81BB11DAE300700C0C3C9 /* Owner.m */,
+				33F81BB21DAE300700C0C3C9 /* Project.h */,
+				33F81BB31DAE300700C0C3C9 /* Project.m */,
+				33F81BA91DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.h */,
+				33F81BAA1DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,6 +587,8 @@
 			children = (
 				3324B0321DAD0E0C007EFFD5 /* HFXOnlyImageItem.h */,
 				3324B0331DAD0E0C007EFFD5 /* HFXOnlyImageItem.m */,
+				33F81BB81DAE52C900C0C3C9 /* HFXTaskLisitCell.h */,
+				33F81BB91DAE52C900C0C3C9 /* HFXTaskLisitCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -819,6 +859,7 @@
 				3324AFEB1DACE618007EFFD5 /* ProjectListResponse.m in Sources */,
 				3324B0141DACE7E9007EFFD5 /* HFXUserInfoView.m in Sources */,
 				3324AFE21DACE5AF007EFFD5 /* HFXSearchBar.m in Sources */,
+				33F81BB51DAE300700C0C3C9 /* TaskModel.m in Sources */,
 				3324AFCF1DACC082007EFFD5 /* UIBarButtonItem+HFXCategory.m in Sources */,
 				3324AFDE1DACE565007EFFD5 /* HFXProjectLisitCell.m in Sources */,
 				332BCED71D9BC12C00D0D0E3 /* NSString+HFXCategory.m in Sources */,
@@ -832,28 +873,35 @@
 				3324AFEC1DACE618007EFFD5 /* Projects.m in Sources */,
 				33F08C601D9A1E1300B655AB /* UIView+HFXCategory.m in Sources */,
 				33F08C631D9A1EFC00B655AB /* UIStoryboard+HFXCategory.m in Sources */,
+				33F81BB41DAE300700C0C3C9 /* Creator.m in Sources */,
 				3324AFF61DACE6AE007EFFD5 /* HFXGuideViewController.m in Sources */,
 				332BCED21D9BB89600D0D0E3 /* BasesModel.m in Sources */,
 				3324AFD81DACE337007EFFD5 /* HFXProjectViewController.m in Sources */,
 				3324B0091DACE743007EFFD5 /* HFXUserInfoModel.m in Sources */,
 				330D4C5B1D98CD93003EB51E /* HFXNavigationViewController.m in Sources */,
+				33F81BBD1DAE582D00C0C3C9 /* NSNumber+HFXCategory.m in Sources */,
 				3324B00F1DACE7B3007EFFD5 /* HFXOnlyTextTableCell.m in Sources */,
 				33F08C741D9A716800B655AB /* UIImage+HFXCategory.m in Sources */,
 				332BCEDE1D9BDA9800D0D0E3 /* HFXAPPMacro.m in Sources */,
 				3324B0211DACE80F007EFFD5 /* HFXMeViewController.m in Sources */,
+				33F81BA81DAE20C100C0C3C9 /* HFXBubbleViewController.m in Sources */,
 				3324B0261DACE842007EFFD5 /* HFXMessageViewController.m in Sources */,
+				33F81BBA1DAE52C900C0C3C9 /* HFXTaskLisitCell.m in Sources */,
 				3324AFF71DACE6AE007EFFD5 /* HFXLoginPageViewController.m in Sources */,
 				3324AFEA1DACE618007EFFD5 /* HFXProjectRequestModel.m in Sources */,
 				33D1FF041DA90B100007710B /* NSAttributedString+HFXCategory.m in Sources */,
-				330D4C711D98F749003EB51E /* HFXBubbleViewController.m in Sources */,
 				3324AFF81DACE6AE007EFFD5 /* HFXProtocolPageViewController.m in Sources */,
 				3324B0341DAD0E0C007EFFD5 /* HFXOnlyImageItem.m in Sources */,
 				330D4C511D98CC02003EB51E /* HFXAppDelegate.m in Sources */,
 				3324AFF91DACE6AE007EFFD5 /* HFXRegisterViewController.m in Sources */,
+				33F81BAB1DAE2A9500C0C3C9 /* HFXTaskLisitRequestModel.m in Sources */,
 				3324B0311DAD0DC3007EFFD5 /* HFXTaskViewController.m in Sources */,
 				3324B0081DACE743007EFFD5 /* HFXRegisterRequestModel.m in Sources */,
 				33F08C531D9A098400B655AB /* HFXStoryboardMacro.m in Sources */,
 				3324B02B1DACF999007EFFD5 /* HFXRootTabBarController.m in Sources */,
+				33F81BB61DAE300700C0C3C9 /* Owner.m in Sources */,
+				33F81BA51DAE11A700C0C3C9 /* HFXBubbleLisitViewController.m in Sources */,
+				33F81BB71DAE300700C0C3C9 /* Project.m in Sources */,
 				330D4C1D1D98CB8B003EB51E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

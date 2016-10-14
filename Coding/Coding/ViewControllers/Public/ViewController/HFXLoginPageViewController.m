@@ -63,12 +63,16 @@
     
     [self isNeedCaptcha];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.view endEditing:NO];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private
 
 - (void)isNeedCaptcha {
     
@@ -87,6 +91,8 @@
     
 }
 
+
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return _isNeedCaptcha ? 3 :2;
@@ -135,6 +141,7 @@
     return cell;
 }
 
+#pragma mark - IBAcitons
 
 - (IBAction)cancelButtonOnClick:(id)sender {
     

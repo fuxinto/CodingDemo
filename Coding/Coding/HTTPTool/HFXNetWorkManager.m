@@ -88,6 +88,8 @@ static HFXNetWorkManager *netWorkManager = nil;
 }
 
 
+
+
 - (void)loginIsNeedCaptchaWithCompletionHandler:(CompletionHandler)completionHandler{
     
     [self getWithURLString:kLoginNeedCaptcha parametes:nil completionHandler:^(id resulst, NSError *error) {
@@ -99,6 +101,14 @@ static HFXNetWorkManager *netWorkManager = nil;
     
     [self getWithURLString:kProjectListAPI parametes:[projectLisitModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
         completionHandler (resulst,error);
+    }];
+}
+
+- (void)taskLisitWithRequestModel:(HFXTaskLisitRequestModel *)taskLisitRequestMode completionHandler:(CompletionHandler)completionHandler {
+    
+    [self getWithURLString:kTaskListAPI parametes:nil completionHandler:^(id resulst, NSError *error) {
+        
+        completionHandler(resulst,error);
     }];
 }
 

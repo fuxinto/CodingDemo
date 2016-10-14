@@ -12,7 +12,6 @@
 #import "NSObject+YYModel.h"
 #import "MJRefresh.h"
 #import "HFXNetWorkManager.h"
-#import "UIBarButtonItem+HFXCategory.h"
 #import "Projects.h"
 #import "HFXSearchBar.h"
 
@@ -32,7 +31,7 @@
     self.statusBarStyle = UIStatusBarStyleDefault;
     
     __weak typeof(self) weakSelf = self;
-    
+
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weakSelf.projectRequestModel.page = @1;
         [weakSelf downLoadProjectList];

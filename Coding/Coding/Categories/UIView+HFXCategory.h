@@ -17,6 +17,7 @@
 @property (assign, nonatomic) CGFloat right;
 @property (assign, nonatomic) CGFloat height;
 @property (assign, nonatomic) CGSize size;
+@property (assign, nonatomic) CGFloat left;
 
 @property (assign, nonatomic) IBInspectable CGFloat cornerRadius;
 @property (assign, nonatomic) IBInspectable CGFloat borderWidth;
