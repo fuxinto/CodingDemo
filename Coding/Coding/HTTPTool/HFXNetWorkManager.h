@@ -10,7 +10,8 @@
 #import "HFXRegisterRequestModel.h"
 #import "HFXLoginRequestModel.h"
 #import "HFXProjectRequestModel.h"
-#import "HFXTaskLisitRequestModel.h"
+#import "HFXTaskListRequestModel.h"
+#import "HFXBubbleListRequest.h"
 
 typedef NS_ENUM(NSInteger, ErrorType) {
     ErrorTypeUserName = 1,
@@ -69,17 +70,26 @@ typedef void(^CompletionHandler)(id resulst, NSError *error);
 /**
  项目列表请求方法
 
- @param projectLisitModel 请求参数Model
+ @param projectListModel 请求参数Model
  @param completionHandler 完成后的回调
  */
-- (void)projectLisitWithRequestModel:(HFXProjectRequestModel *)projectLisitModel completionHandler:(CompletionHandler)completionHandler;
+- (void)projectListWithRequestModel:(HFXProjectRequestModel *)projectListModel completionHandler:(CompletionHandler)completionHandler;
 
 /**
  任务列表请求方法
 
- @param taskLisitRequestMode 请求参数Model
+ @param taskListRequestMode 请求参数Model
  @param completionHandler    完成后的回调
  */
-- (void)taskLisitWithRequestModel:(HFXTaskLisitRequestModel *)taskLisitRequestMode completionHandler:(CompletionHandler)completionHandler;
+- (void)taskListWithRequestModel:(HFXTaskListRequestModel *)taskListRequestMode completionHandler:(CompletionHandler)completionHandler;
 
+
+/**
+ 冒泡列表
+
+ @param api               接口地址
+ @param bubbleListRequest 请求参数Model
+ @param completionHandler 完成后的回调
+ */
+- (void)bubbleListWithAPI:(NSString *)api requestModel:(HFXBubbleListRequest *)bubbleListRequest completionHandler:(CompletionHandler)completionHandler;
 @end

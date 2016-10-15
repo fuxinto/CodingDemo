@@ -9,7 +9,7 @@
 #import "HFXBaseTableViewCell.h"
 #import "TaskModel.h"
 
-@interface HFXTaskLisitCell : HFXBaseTableViewCell
+@interface HFXTaskListCell : HFXBaseTableViewCell
 @property (strong, nonatomic) IBOutlet UIButton *checkButton;
 
 @property (strong, nonatomic) IBOutlet UIImageView *taskImageView;

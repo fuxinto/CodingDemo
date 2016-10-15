@@ -16,6 +16,8 @@
 #define kGetCaptcha                         @"api/getCaptcha"
 #define kProjectListAPI                     @"api/projects"
 #define kTaskListAPI                        @"api/tasks/all"
+#define kBubbleListAPI                      @"api/tweet/public_tweets"
+#define kBubbleFriendAPI                    @"api/activities/user_tweet"
 
 
 #endif /* APIMacro_h */

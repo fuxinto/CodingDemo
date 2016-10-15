@@ -37,5 +37,41 @@
     return [string stringByAppendingString:[NSString stringWithFormat:@"?imageMogr2/auto-orient/thumbnail/!%.0fx%.0fr", size, size]];
     
 }
+@end
+
+@implementation NSString (HTML)
+
+- (NSString *)trimWhitespace
+{
+    NSMutableString *str = [self mutableCopy];
+    CFStringTrimWhitespace((__bridge CFMutableStringRef)str);
+    return str;
+}
+
+- (NSRange)rangeByTrimmingLeftCharactersInSet:(NSCharacterSet *)characterSet{
+    NSUInteger location = 0;
+    NSUInteger length = [self length];
+    unichar charBuffer[length];
+    [self getCharacters:charBuffer];
+    for (location = 0; location < length; location++) {
+        if (![characterSet characterIsMember:charBuffer[location]]) {
+            break;
+        }
+    }
+    return NSMakeRange(location, length - location);
+}
+- (NSRange)rangeByTrimmingRightCharactersInSet:(NSCharacterSet *)characterSet{
+    NSUInteger location = 0;
+    NSUInteger length = [self length];
+    unichar charBuffer[length];
+    [self getCharacters:charBuffer];
+    for (length = [self length]; length > 0; length--) {
+        if (![characterSet characterIsMember:charBuffer[length - 1]]) {
+            break;
+        }
+    }
+    return NSMakeRange(location, length - location);
+}
 
 @end
+

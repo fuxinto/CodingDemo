@@ -6,8 +6,8 @@
 //  Copyright © 2016年 fuxinto. All rights reserved.
 //
 
-#import "HFXTaskLisitRequestModel.h"
+#import "HFXTaskListRequestModel.h"
 
-@implementation HFXTaskLisitRequestModel
+@implementation HFXTaskListRequestModel
 
 @end

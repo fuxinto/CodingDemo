@@ -8,7 +8,7 @@
 
 #import "HFXBaseTableViewCell.h"
 
-@interface HFXProjectLisitCell : HFXBaseTableViewCell
+@interface HFXProjectListCell : HFXBaseTableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *onwerLabel;

@@ -78,27 +78,28 @@
 
 - (void)releaseOnClickButton:(UIButton *)sender {
     
-    
 }
 
 
 #pragma mark - UIPageViewControllerDataSource
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSInteger index = [self.viewControllers indexOfObject:viewController];
+    if (index == 0) {
+        return nil;
+    }
+    return self.viewControllers[index-1];
+
+    
+}
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     NSInteger index = [self.viewControllers indexOfObject:viewController];
     if (index == 2) {
         return nil;
     }
     return self.viewControllers[index+1];
-}
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    
-    NSInteger index = [self.viewControllers indexOfObject:viewController];
-    if (index == 0) {
-        return nil;
-    }
-    return self.viewControllers[index-1];
+
 }
 
 

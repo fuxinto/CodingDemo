@@ -42,6 +42,8 @@
         [weakSelf downLoadProjectList];
     }];
     [self setupNavigationBar];
+    [self downLoadProjectList];
+//    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +53,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 #pragma mark - Private
@@ -76,7 +78,7 @@
 }
 - (void)downLoadProjectList {
     
-    [[HFXNetWorkManager shareInstance] projectLisitWithRequestModel:self.projectRequestModel completionHandler:^(id resulst, NSError *error) {
+    [[HFXNetWorkManager shareInstance] projectListWithRequestModel:self.projectRequestModel completionHandler:^(id resulst, NSError *error) {
         
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
@@ -139,7 +141,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HFXProjectLisitCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXCellCustomIdentifier];
+    HFXProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXCellCustomIdentifier];
     
     Projects *project = self.projectList[indexPath.row];
     

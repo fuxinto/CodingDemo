@@ -8,7 +8,7 @@
 
 #import "HFXProjectLisitCell.h"
 
-@implementation HFXProjectLisitCell
+@implementation HFXProjectListCell
 
 /*
 // Only override drawRect: if you perform custom drawing.

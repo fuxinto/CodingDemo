@@ -103,6 +103,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     HFXOnlyTextTableCell *cell = [tableView dequeueReusableCellWithIdentifier:HFXOnlyTextTableCellIdentifier];
+
     
     if (indexPath.row == 2) {
         cell.captchaImageView.hidden = NO;
@@ -151,6 +152,7 @@
 - (IBAction)goToRegisterPage:(id)sender {
     
     HFXRegisterViewController *VC = (HFXRegisterViewController *)[UIStoryboard storyboardWithName:HFXPublicStoryboardName instantiateWithIdentifier:HFXRegisterPageIdentifier];
+    
     
     UINavigationController *naviga = [[UINavigationController alloc]initWithRootViewController:VC];
     

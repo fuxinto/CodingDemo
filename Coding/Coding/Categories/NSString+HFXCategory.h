@@ -15,3 +15,11 @@
 - (NSString *)imageURLStringWithSize:(CGFloat)size;
 
 @end
+
+@interface NSString (HTML)
+
+- (NSString *)trimWhitespace;
+- (NSRange)rangeByTrimmingLeftCharactersInSet:(NSCharacterSet *)characterSet;
+- (NSRange)rangeByTrimmingRightCharactersInSet:(NSCharacterSet *)characterSet;
+
+@end

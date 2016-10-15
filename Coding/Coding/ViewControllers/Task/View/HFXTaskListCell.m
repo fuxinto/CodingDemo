@@ -6,10 +6,10 @@
 //  Copyright © 2016年 fuxinto. All rights reserved.
 //
 
-#import "HFXTaskLisitCell.h"
+#import "HFXTaskListCell.h"
 #import "UIImageView+WebCache.h"
 
-@implementation HFXTaskLisitCell
+@implementation HFXTaskListCell
 
 #pragma mark - IBActions
 - (IBAction)clickOnButton:(UIButton *)sender {

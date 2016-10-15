@@ -8,7 +8,7 @@
 
 #import "BasesModel.h"
 
-@interface HFXTaskLisitRequestModel : BasesModel
+@interface HFXTaskListRequestModel : BasesModel
 @property (copy, nonatomic) NSNumber *page;
 @property (copy, nonatomic) NSNumber *pageSize;
 

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N6e-rI-Wx0">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N6e-rI-Wx0">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Sf8-c2-sHd"/>
@@ -56,7 +56,7 @@
                                             <constraint firstAttribute="trailing" secondItem="iIe-Q1-3XM" secondAttribute="trailing" id="x34-bL-scH"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="imageView" destination="iIe-Q1-3XM" id="Ufz-Vi-2Kk"/>
+                                            <outlet property="imageView" destination="iIe-Q1-3XM" id="MjD-Bc-b8u"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -76,7 +76,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9o-yo-TqK">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HFXTaskLisitCell" id="Ggs-VF-HPB" customClass="HFXTaskLisitCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HFXTaskLisitCell" id="Ggs-VF-HPB" customClass="HFXTaskListCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ggs-VF-HPB" id="kU2-1n-pxg">
@@ -247,10 +247,30 @@
                         <viewControllerLayoutGuide type="bottom" id="To3-BZ-MOm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UhM-is-rVa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sq7-rs-IYf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fBF-uy-GRR" id="to0-HP-Y2t"/>
+                                    <outlet property="delegate" destination="fBF-uy-GRR" id="GQs-DI-eOd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sq7-rs-IYf" firstAttribute="leading" secondItem="UhM-is-rVa" secondAttribute="leading" id="62r-AM-mw4"/>
+                            <constraint firstAttribute="trailing" secondItem="Sq7-rs-IYf" secondAttribute="trailing" id="BRQ-N9-iZQ"/>
+                            <constraint firstItem="To3-BZ-MOm" firstAttribute="top" secondItem="Sq7-rs-IYf" secondAttribute="bottom" id="Oh0-J1-hqM"/>
+                            <constraint firstItem="Sq7-rs-IYf" firstAttribute="top" secondItem="N5v-bs-HE0" secondAttribute="bottom" id="lRF-PE-I3G"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sq7-rs-IYf" id="oug-hk-aMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCA-Xl-Crk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,7 +521,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-vA-CuV">
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="HiZ-2b-nrO" customClass="HFXProjectLisitCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="HiZ-2b-nrO" customClass="HFXProjectListCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HiZ-2b-nrO" id="XsM-VT-XyP">

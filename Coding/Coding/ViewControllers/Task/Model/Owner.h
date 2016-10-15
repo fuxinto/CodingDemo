@@ -28,5 +28,7 @@
 @property (copy, nonatomic) NSString *introduction;
 @property (copy, nonatomic) NSNumber *created_at;
 @property (assign, nonatomic, getter=isFollow) BOOL follow;
+@property (copy, nonatomic) NSNumber *job;
+@property (copy, nonatomic) NSNumber *last_activity_at;
 
 @end

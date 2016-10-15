@@ -11,22 +11,22 @@
 #import "YYModel.h"
 #import "TaskModel.h"
 #import "UIImageView+WebCache.h"
-#import "HFXTaskLisitCell.h"
+#import "HFXTaskListCell.h"
 #import "MJRefresh.h"
 
 @interface HFXTaskViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) HFXTaskLisitRequestModel *requestModel;
+@property (strong, nonatomic) HFXTaskListRequestModel *requestModel;
 @property (strong, nonatomic) UIView *line;
-@property (strong, nonatomic) NSArray *projectLisit;
-@property (strong, nonatomic) NSMutableArray *taskLisit;
+@property (strong, nonatomic) NSArray *projectList;
+@property (strong, nonatomic) NSMutableArray *taskList;
 
 
 /**
  刷新按钮的点击事件
  */
-- (void)downLoadTaskLisit;
+- (void)downLoadTaskList;
 /**
  添加按钮的点击事件
  */
@@ -49,13 +49,15 @@
     self.navigationItem.rightBarButtonItem = addBarButton;
     
     __weak typeof(self) weakSelf = self;
-    self.tableView.mj_header.backgroundColor = [UIColor colorWithR:228 G:228 B:228 alpha:1];
+
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         
-        [weakSelf downLoadTaskLisit];
+        [weakSelf downLoadTaskList];
     }];
-
     
+    [self downLoadTaskList];
+
+//    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,17 +74,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.tableView.mj_header beginRefreshing];
+    
 //    [self downLoadTaskLisit];
 }
 
 #pragma mark - Private
 
-- (void)downLoadTaskLisit {
+- (void)downLoadTaskList {
     
 //    [self showHUDQueryStr:@"正在加载..."];
     
-    [[HFXNetWorkManager shareInstance] taskLisitWithRequestModel:self.requestModel completionHandler:^(id resulst, NSError *error) {
+    [[HFXNetWorkManager shareInstance] taskListWithRequestModel:self.requestModel completionHandler:^(id resulst, NSError *error) {
 //        [self hideHUDQuery];
         [self.tableView.mj_header endRefreshing];
         if (error) {
@@ -100,16 +102,16 @@
                 [dic setObject:project forKey:project.n_id];
             }
             
-            self.projectLisit = [dic allValues];
+            self.projectList = [dic allValues];
             
             if (self.requestModel.pageSize.integerValue == 1) {
-                [self.taskLisit removeAllObjects];
+                [self.taskList removeAllObjects];
             }
-            [self.taskLisit addObjectsFromArray:info];
+            [self.taskList addObjectsFromArray:info];
             [self.tableView reloadData];
             [self.collectionView reloadData];
         }
-        NSLog(@"%ld",self.taskLisit.count);
+        
     }];
 }
 
@@ -119,7 +121,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     
-    return self.projectLisit.count + 1;
+    return self.projectList.count + 1;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -129,7 +131,7 @@
         item.imageView.image = [UIImage imageNamed:@"tasks_all"];
     }else {
         
-        Project *project = self.projectLisit[indexPath.row-1];
+        Project *project = self.projectList[indexPath.row-1];
         
         NSString *url = [project.icon imageURLStringWithSize:40];
         
@@ -162,15 +164,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.taskLisit.count;
+    return self.taskList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HFXTaskLisitCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HFXTaskLisitCell" forIndexPath:indexPath];
+    HFXTaskListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HFXTaskLisitCell" forIndexPath:indexPath];
     
 
-    cell.model = self.taskLisit[indexPath.row];
+    cell.model = self.taskList[indexPath.row];
     cell.StatusDidChangeBlock = ^(BOOL isSelected) {
         NSLog(@"%d", isSelected);
     };
@@ -214,27 +216,27 @@ viewForHeaderInSection:(NSInteger)section {
 
 #pragma mark - Custom Accessors
 
-- (HFXTaskLisitRequestModel *)requestModel {
+- (HFXTaskListRequestModel *)requestModel {
     
     if (!_requestModel) {
-        _requestModel = [[HFXTaskLisitRequestModel alloc]init];
+        _requestModel = [[HFXTaskListRequestModel alloc]init];
         _requestModel.pageSize = @999;
     }
     return _requestModel;
 }
 
-- (NSMutableArray *)taskLisit {
-    if (!_taskLisit) {
-        _taskLisit = [NSMutableArray array];
+- (NSMutableArray *)taskList {
+    if (!_taskList) {
+        _taskList = [NSMutableArray array];
     }
-    return _taskLisit;
+    return _taskList;
 }
 
-- (NSArray *)projectLisit {
-    if (!_projectLisit) {
-        _projectLisit = [NSArray array];
+- (NSArray *)projectList {
+    if (!_projectList) {
+        _projectList = [NSArray array];
     }
-    return _projectLisit;
+    return _projectList;
 }
 - (UIView *)line {
     if (!_line) {

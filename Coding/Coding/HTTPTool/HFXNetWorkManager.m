@@ -79,6 +79,14 @@ static HFXNetWorkManager *netWorkManager = nil;
 
 #pragma mark - API
 
+- (void)bubbleListWithAPI:(NSString *)api requestModel:(HFXBubbleListRequest *)bubbleListRequest completionHandler:(CompletionHandler)completionHandler {
+    
+    [self getWithURLString:api parametes:[bubbleListRequest yy_modelToJSONObject]  completionHandler:^(id resulst, NSError *error) {
+        completionHandler(resulst, error);
+    }];
+}
+
+
 - (void)registerIsNeedCaptchaWithCompletionHandler:(CompletionHandler)completionHandler {
     
     [self getWithURLString:kRegisterNeedCaptcha parametes:nil completionHandler:^(id resulst, NSError *error) {
@@ -97,14 +105,14 @@ static HFXNetWorkManager *netWorkManager = nil;
     }];
 }
 
-- (void)projectLisitWithRequestModel:(HFXProjectRequestModel *)projectLisitModel completionHandler:(CompletionHandler)completionHandler {
+- (void)projectListWithRequestModel:(HFXProjectRequestModel *)projectListModel completionHandler:(CompletionHandler)completionHandler {
     
-    [self getWithURLString:kProjectListAPI parametes:[projectLisitModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
+    [self getWithURLString:kProjectListAPI parametes:[projectListModel yy_modelToJSONObject] completionHandler:^(id resulst, NSError *error) {
         completionHandler (resulst,error);
     }];
 }
 
-- (void)taskLisitWithRequestModel:(HFXTaskLisitRequestModel *)taskLisitRequestMode completionHandler:(CompletionHandler)completionHandler {
+- (void)taskListWithRequestModel:(HFXTaskListRequestModel *)taskListRequestMode completionHandler:(CompletionHandler)completionHandler {
     
     [self getWithURLString:kTaskListAPI parametes:nil completionHandler:^(id resulst, NSError *error) {
         
