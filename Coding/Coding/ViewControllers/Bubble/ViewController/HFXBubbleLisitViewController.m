@@ -174,6 +174,7 @@
         for (int i = 0; i < 3; i++) {
             
             HFXBubbleViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:HFXBubblePageIdentifier];
+            VC.bubbletype = i;
             [_viewControllers addObject:VC];
         }
     }

@@ -7,8 +7,9 @@
 //
 
 #import "HFXBaseTableViewCell.h"
+#import "BubbleModel.h"
 
 
 @interface HFXBubbleCell : HFXBaseTableViewCell
-//@property (strong, nonatomic) BubbleModel *bubbleModel;
+@property (strong, nonatomic) BubbleModel *bubbleModel;
 @end

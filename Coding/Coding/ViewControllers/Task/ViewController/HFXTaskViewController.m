@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "HFXTaskListCell.h"
 #import "MJRefresh.h"
+#import "Masonry.h"
 
 @interface HFXTaskViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -38,7 +39,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的任务";
+    UINib *nib = [UINib nibWithNibName:@"HFXOnlyImageItem" bundle:nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"HFXOnlyImageItem"];
     [self.collectionView addSubview:self.line];
+    
     
     UIBarButtonItem *addBarButton =
     [UIBarButtonItem itemWithNormalImageName:@"addBtn_Nav"
@@ -56,6 +60,8 @@
     }];
     
     [self downLoadTaskList];
+    
+    
 
 //    [self.tableView.mj_header beginRefreshing];
 }
@@ -82,10 +88,10 @@
 
 - (void)downLoadTaskList {
     
-//    [self showHUDQueryStr:@"正在加载..."];
+    [self showHUDQueryStr:@"正在加载..."];
     
     [[HFXNetWorkManager shareInstance] taskListWithRequestModel:self.requestModel completionHandler:^(id resulst, NSError *error) {
-//        [self hideHUDQuery];
+        [self hideHUDQuery];
         [self.tableView.mj_header endRefreshing];
         if (error) {
             [self showTipsWithError:error];
@@ -126,6 +132,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     HFXOnlyImageItem *item = [collectionView dequeueReusableCellWithReuseIdentifier:@"HFXOnlyImageItem" forIndexPath:indexPath];
+    
+    item.imageView.cornerRadius = 20;
+    [item.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+    }];
     
     if (indexPath.row == 0) {
         item.imageView.image = [UIImage imageNamed:@"tasks_all"];

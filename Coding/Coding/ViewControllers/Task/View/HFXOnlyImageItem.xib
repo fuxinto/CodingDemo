@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HFXOnlyImageItem">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HFXOnlyImageItem" id="gTV-IL-0wX" customClass="HFXOnlyImageItem">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -27,6 +27,9 @@
                 <constraint firstItem="Ba7-zf-Ng6" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="73e-v8-41r"/>
                 <constraint firstItem="Ba7-zf-Ng6" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GsX-07-SN4"/>
             </constraints>
+            <connections>
+                <outlet property="imageView" destination="Ba7-zf-Ng6" id="4mr-ys-uNa"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

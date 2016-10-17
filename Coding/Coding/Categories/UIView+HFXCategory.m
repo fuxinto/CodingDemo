@@ -59,6 +59,7 @@
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
+    self.clipsToBounds = YES;
 }
 
 - (void)setBorderColor:(UIColor *)borderColor {

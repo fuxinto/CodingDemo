@@ -9,7 +9,9 @@
 #import "HFXBubbleViewController.h"
 #import "BubbleModel.h"
 #import "YYModel.h"
+#import "HFXBubbleCell.h"
 
+static NSString *reuseIdentifier = @"HFXBubbleCell";
 @interface HFXBubbleViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) HFXBubbleListRequest *requestModel;
@@ -31,11 +33,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithHex:0xeeeeee alpha:1];
+    [self.tableView registerClass:[HFXBubbleCell class] forCellReuseIdentifier:reuseIdentifier];
 }
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
+    [self.tableView registerClass:[HFXBubbleCell class] forCellReuseIdentifier:reuseIdentifier];
     [self refreshData];
 }
 - (void)didReceiveMemoryWarning {
@@ -96,9 +101,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return nil;
+    HFXBubbleCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.bubbleModel = self.bubbleList[indexPath.row];
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BubbleModel *model  = self.bubbleList[indexPath.row];
+    return 38+18 + 15 + 15 + 15 + 20+10 +15 + model.varContentHeight;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 #pragma mark - Custom Assessors
 
 - (HFXBubbleListRequest *)requestModel {

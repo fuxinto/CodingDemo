@@ -86,14 +86,21 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    
+    NSLog(@"%@",string);
     if (self.textFieldDidChangeBlock) {
         self.textFieldDidChangeBlock([textField.text stringByAppendingString:string]);
+    }
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (self.mark == 1) {
+        self.textFieldLineFeedBlock(YES);
     }
     
     return YES;
 }
-
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
@@ -115,7 +122,7 @@
         _textField = [[UITextField alloc]init];
         _textField.textColor = [UIColor colorWithHex:0x222222 alpha:1];
         _textField.delegate = self;
-    }    
+    }
     return _textField;
 }
 

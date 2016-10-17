@@ -15,9 +15,9 @@
 @property (strong, nonatomic) UITextField *textField;
 @property (strong, nonatomic) UIColor *cliCkColor;
 @property (strong, nonatomic) void (^textFieldDidChangeBlock)(NSString *text);
-
+@property (assign, nonatomic) NSInteger mark;
 @property (strong, nonatomic) HFXTapImageView *captchaImageView;
-
+@property (strong, nonatomic) void (^textFieldLineFeedBlock)(BOOL yes);
 
 /**
  刷新验证码

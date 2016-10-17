@@ -61,6 +61,7 @@
 		3349EEF51DB24AC100CA6BD1 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349EEF21DB24AC100CA6BD1 /* XPathQuery.m */; };
 		3349EEFA1DB24BC900CA6BD1 /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349EEF91DB24BC900CA6BD1 /* NSString+Emojize.m */; };
 		3349EEFE1DB24E3500CA6BD1 /* HtmlMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349EEFD1DB24E3500CA6BD1 /* HtmlMedia.m */; };
+		3349EF011DB2578A00CA6BD1 /* HFXCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3349EF001DB2578A00CA6BD1 /* HFXCommentCell.m */; };
 		337F8F021DB0FC5400F49B9B /* HFXBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F8EFC1DB0FC5400F49B9B /* HFXBubbleCell.m */; };
 		337F8F031DB0FC5400F49B9B /* HFXBubbleLisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F8EFF1DB0FC5400F49B9B /* HFXBubbleLisitViewController.m */; };
 		337F8F041DB0FC5400F49B9B /* HFXBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337F8F011DB0FC5400F49B9B /* HFXBubbleViewController.m */; };
@@ -210,6 +211,8 @@
 		3349EEF91DB24BC900CA6BD1 /* NSString+Emojize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emojize.m"; sourceTree = "<group>"; };
 		3349EEFC1DB24E3500CA6BD1 /* HtmlMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlMedia.h; sourceTree = "<group>"; };
 		3349EEFD1DB24E3500CA6BD1 /* HtmlMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlMedia.m; sourceTree = "<group>"; };
+		3349EEFF1DB2578A00CA6BD1 /* HFXCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXCommentCell.h; sourceTree = "<group>"; };
+		3349EF001DB2578A00CA6BD1 /* HFXCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXCommentCell.m; sourceTree = "<group>"; };
 		337F8EFB1DB0FC5400F49B9B /* HFXBubbleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBubbleCell.h; sourceTree = "<group>"; };
 		337F8EFC1DB0FC5400F49B9B /* HFXBubbleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXBubbleCell.m; sourceTree = "<group>"; };
 		337F8EFE1DB0FC5400F49B9B /* HFXBubbleLisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXBubbleLisitViewController.h; sourceTree = "<group>"; };
@@ -715,6 +718,8 @@
 			children = (
 				337F8EFB1DB0FC5400F49B9B /* HFXBubbleCell.h */,
 				337F8EFC1DB0FC5400F49B9B /* HFXBubbleCell.m */,
+				3349EEFF1DB2578A00CA6BD1 /* HFXCommentCell.h */,
+				3349EF001DB2578A00CA6BD1 /* HFXCommentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				33F81BB41DAE300700C0C3C9 /* Creator.m in Sources */,
 				3324AFF61DACE6AE007EFFD5 /* HFXGuideViewController.m in Sources */,
 				337F8F031DB0FC5400F49B9B /* HFXBubbleLisitViewController.m in Sources */,
+				3349EF011DB2578A00CA6BD1 /* HFXCommentCell.m in Sources */,
 				3349EEFE1DB24E3500CA6BD1 /* HtmlMedia.m in Sources */,
 				3324AFD81DACE337007EFFD5 /* HFXProjectViewController.m in Sources */,
 				3349EED51DB241EB00CA6BD1 /* HFXOnlyImageItem.m in Sources */,

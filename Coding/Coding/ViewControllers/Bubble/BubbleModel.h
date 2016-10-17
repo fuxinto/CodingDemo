@@ -2,7 +2,7 @@
 #import "Like_Users.h"
 #import "Comment_List.h"
 #import "Owner.h"
-//#import "HtmlMedia.h"
+#import "HtmlMedia.h"
 
 @interface BubbleModel : BasesModel
 
@@ -26,5 +26,6 @@
 @property (assign, nonatomic, getter=isRewarded) BOOL rewarded;
 @property (copy, nonatomic) NSString *content;
 
-//@property (strong, nonatomic) HtmlMedia *htmlMedia;
+@property (strong, nonatomic) HtmlMedia *htmlMedia;
+@property (assign ,nonatomic) CGFloat varContentHeight;
 @end

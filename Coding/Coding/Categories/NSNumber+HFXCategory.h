@@ -10,6 +10,7 @@
 typedef NS_ENUM(NSUInteger, DateType) {
     DateTypeMMD = 0,
     DateTypeHHmmss = 1,
+    DateTypeYYMMDHHmmss = 2,
 };
 
 @interface NSNumber (HFXCategory)

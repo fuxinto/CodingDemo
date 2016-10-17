@@ -63,6 +63,13 @@
     
     [self isNeedCaptcha];
 }
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+
+    
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self.view endEditing:NO];
@@ -110,15 +117,18 @@
     }else {
         cell.captchaImageView.hidden = YES;
     }
+    cell.mark = indexPath.row;
+    
     cell.textField.placeHolderColor = [UIColor colorWithR:223 G:223 B:223 alpha:0.5];
     cell.cliCkColor = [UIColor whiteColor];
     
     __weak typeof(self) weakSelf = self;
+    
     switch (indexPath.row) {
         case 0:{
             cell.textField.placeholder = @"手机号码/电子邮箱/个性后缀";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                self.loginRequestModel.account = text;
+                weakSelf.loginRequestModel.account = text;
             };
         }
             break;
@@ -126,7 +136,10 @@
             cell.textField.secureTextEntry = YES;
             cell.textField.placeholder = @"密码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
-                self.loginRequestModel.password = text;
+                weakSelf.loginRequestModel.password = text;
+            };
+            cell.textFieldLineFeedBlock = ^(BOOL is){
+                [weakSelf loginButtonClick:nil];
             };
         }
             break;
@@ -141,6 +154,8 @@
     
     return cell;
 }
+
+
 
 #pragma mark - IBAcitons
 
