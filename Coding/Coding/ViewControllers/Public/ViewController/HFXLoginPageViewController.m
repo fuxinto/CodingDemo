@@ -138,15 +138,22 @@
             cell.textFieldDidChangeBlock = ^(NSString *text){
                 weakSelf.loginRequestModel.password = text;
             };
-            cell.textFieldLineFeedBlock = ^(BOOL is){
-                [weakSelf loginButtonClick:nil];
-            };
+            
+            if (!_isNeedCaptcha) {
+                cell.textFieldLineFeedBlock = ^(BOOL is){
+                    [weakSelf loginButtonClick:nil];
+                };
+
+            }
         }
             break;
         default:{
             cell.textField.placeholder = @"验证码";
             cell.textFieldDidChangeBlock = ^(NSString *text){
                 weakSelf.loginRequestModel.j_captcha = text;
+            };
+            cell.textFieldLineFeedBlock = ^(BOOL is){
+                [weakSelf loginButtonClick:nil];
             };
         }
             break;

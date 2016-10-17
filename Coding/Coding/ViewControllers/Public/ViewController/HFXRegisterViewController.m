@@ -150,6 +150,11 @@
                 weakSelf.registerRequestModel.password = text;
             
             };
+            if (!_isNeedCaptcha) {
+                cell.textFieldLineFeedBlock = ^(BOOL is){
+                    [weakSelf registerButton:nil];
+                };
+            }
         }
             break;
         default:{
@@ -157,6 +162,10 @@
             cell.textFieldDidChangeBlock = ^(NSString *text){
                 weakSelf.registerRequestModel.j_captcha = text;
             };
+            cell.textFieldLineFeedBlock = ^(BOOL is){
+                [weakSelf registerButton:nil];
+            };
+
         }
             break;
     }

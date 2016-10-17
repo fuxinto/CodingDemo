@@ -10,6 +10,7 @@
 #import "BubbleModel.h"
 #import "YYModel.h"
 #import "HFXBubbleCell.h"
+#import "MJRefresh.h"
 
 static NSString *reuseIdentifier = @"HFXBubbleCell";
 @interface HFXBubbleViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -36,6 +37,14 @@ static NSString *reuseIdentifier = @"HFXBubbleCell";
     
     self.view.backgroundColor = [UIColor colorWithHex:0xeeeeee alpha:1];
     [self.tableView registerClass:[HFXBubbleCell class] forCellReuseIdentifier:reuseIdentifier];
+
+    __weak typeof(self) weakSelf = self;
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf refreshData];
+    }];
+
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -78,7 +87,7 @@ static NSString *reuseIdentifier = @"HFXBubbleCell";
 - (void)downLoadBubbleListWithAPI:(NSString *)api {
     
     [[HFXNetWorkManager shareInstance] bubbleListWithAPI:api requestModel:self.requestModel completionHandler:^(id resulst, NSError *error) {
-        
+        [self.tableView.mj_header endRefreshing];
         if (error) {
             [self showTipsWithError:error];
         }else if(resulst){

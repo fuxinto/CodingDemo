@@ -86,7 +86,6 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    NSLog(@"%@",string);
     if (self.textFieldDidChangeBlock) {
         self.textFieldDidChangeBlock([textField.text stringByAppendingString:string]);
     }
